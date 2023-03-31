@@ -1,1 +1,0 @@
-export const tWelcome = 'welcome to cambi from words'

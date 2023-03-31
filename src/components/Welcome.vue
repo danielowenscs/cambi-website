@@ -1,15 +1,14 @@
 <template>
     <div>hi</div>
-    <div>{{tWelcome}}</div>
+    <div>{{welcome}}</div>
 </template>
 <script>
-import {tWelcome} from '../assets/words.js'
+import {strings} from '../assets/strings.js'
 export default {
     name: "Welcome",
-    tWelcome,
     data () {
         return {
-            tWelcome: this.tWelcome
+            welcome: strings.welcome
         }
     }
 
