@@ -1,11 +1,16 @@
 <template>
+  <Welcome/>
 <JoinForm/>
 </template>
 <script>
-import JoinForm from './components/JoinForm.vue';
+import JoinForm from './components/JoinForm.vue'
+import Welcome from './components/Welcome.vue'
 export default { 
   components: {
-    JoinForm
+    JoinForm,
+    Welcome
   }
 }
 </script>
+<style>
+</style>
