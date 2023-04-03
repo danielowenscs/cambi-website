@@ -1,16 +1,19 @@
 <template>
-  <Welcome/>
-<JoinForm/>
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <Header/>
+  <Home/>
 </template>
 <script>
-import JoinForm from './components/JoinForm.vue'
-import Welcome from './components/Welcome.vue'
+import Header from './components/Header.vue'
+import Home from './views/Home.vue'
+
 export default { 
   components: {
-    JoinForm,
-    Welcome
+    Header,
+    Home
   }
 }
 </script>
 <style>
+
 </style>
