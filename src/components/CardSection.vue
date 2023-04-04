@@ -1,7 +1,7 @@
 <template>
 <div class="grid">
     <div class="container">
-        <div class="B2" >{{ card1 }}</div>
+        <div class="B2 item-1" >{{ card1 }}</div>
         <div class="H2">{{ card2 }}</div>  
         <div class="B1">{{ card3 }}</div>  
     </div>
@@ -64,6 +64,10 @@ html {
     border-radius: 16px;
     justify-content: flex-start;
     
+}
+.item-1 {
+    text-align: left !important;
+    color: $Se2;
 }
 
  
