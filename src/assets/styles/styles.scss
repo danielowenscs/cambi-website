@@ -89,42 +89,11 @@ font-size: 14px;
 }
 
 /* buttons */
-.Primary-Button {
-    color: $P1;
-    padding: 32px 32px 10px 10px;
-    padding: 9.5px 32px;
-    border-width: 1px;
-    border-radius: 15px;
-    background-color: $P5;
-    
-}
-
-@keyframes animate {
-    0%{
-        background-position: 0%;
-    }
-    100%{
-        background-position: 400%;
-    }
-}
-a:hover{
-    animation: animate 8s linear infinite;
-}
-button:before{
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg,#df5b5b, #f96161, #fc8f46, #e43636);
-    background-size: 400px;
-    border-radius: 40px;
-    opacity: 0;
-    transition: 0.5s;
-}
-button:hover:before{
-    filter: blur(10px);
-    opacity: 1;
-}
+// .Primary-Button {
+//     color: $P1;
+//     padding: 32px 32px 10px 10px;
+//     padding: 9.5px 32px;
+//     border-width: 1px;
+//     border-radius: 15px;
+//     background-color: $P5;
+// }
