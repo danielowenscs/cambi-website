@@ -70,5 +70,32 @@ html {
     color: $Se2;
 }
 
+//WIP
+@media (width < 1024){
+    .grid {
+        display: grid;
+        // align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5 px;
+        padding-bottom: 120px;
+        background-color: azure;
+        justify-content: space-around;
+    }  
+}
+
+//I believe this should work correctly
+@media (width > 1260px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16 px;
+        padding-bottom: 120px;
+        background-color: azure;
+        justify-content: space-around;
+        padding-left: 33%;
+        padding-right: 33%;
+    }  
+}
+
  
 </style>
