@@ -1,19 +1,15 @@
 <template>
-<html>
-    <div class="container">
-        <div class="auto-layout">
-           <div class=" H1 item">
-            Shop Mindfully
-           </div>
-           <div class="B2 item">
-            Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.
-           </div>
-           <div>
-            <button class="button">Join Cambi</button>
-           </div>
+   <div class="background">
+        <div class="container">
+            <div class="grid">
+                <div class="content">
+                <h1 class="H1">Shop Mindfully</h1>
+                <p class="B1">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</p>
+                <button class="B1 button">Join Cambi</button>
+                </div>
+            </div>
         </div>
-    </div>
-</html>
+   </div>
 </template>
 <script>
 import strings from '@/assets/strings'
@@ -32,39 +28,45 @@ export default {
 html {
     font-size: 62.5% !important;
 }
+body {
+    max-width: 1260px;
+    margin:auto;
+}
+.background {
+    background: linear-gradient(-45deg, #312D9F, #4858D7);
+}
 .container {
-    height: 584px;
-    left: 0px;
-    right: 0px;
-    top: 80px;
-    background-color: $P5;
+    max-width: 1260px;
+    margin: auto;
 }
-.auto-layout {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0px;
-    gap: 40px;
-    height: 344px;
-    top: 120px; 
-    background-color: $Se1;
+.grid {
+    padding: 120px 40px;
+    margin: auto;
+    height: 400px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
-
-.item{
-    display: flex;
-    align-items: center;
+.content {
+    grid-column: 2/11;
     text-align: center;
+}
+h1 {
+}
+div.content > * {
+    margin: 40px 0 0 0;
+    justify-content: flex-start;
     color: $N6;
 }
 .button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 32px;
-    gap: 10px;
-    background: $Se2;
     border-radius: 40px;
+    width: 209px;
+    //height: 56px;
+    padding: 16px;
+    background-color: $Se2;
+    border-color: none;
 }
+
+
+
 </style>
