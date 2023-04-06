@@ -1,4 +1,5 @@
 <template>
+<scrolly>
 <div class="grid">
     <div class="container">
         <div class="B2 item-1" >{{ card1 }}</div>
@@ -16,6 +17,7 @@
     <div class="B1">{{ card9 }}</div>  
 </div>  
 </div>
+</scrolly>
 </template>
 <script>
 import { strings } from '@/assets/strings';
@@ -44,6 +46,16 @@ export default {
 html {
     font-size: 62.5% !important;
 }
+
+:root {
+    --page-margin: min(33%, 33%)
+}
+
+scrolly {
+    display: grid;
+    grid-template-columns: var(--page-margin) [center-start] 1fr [center-end] var(--page-margin);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -71,19 +83,24 @@ html {
 }
 
 //WIP
-@media (width < 1024){
+@media (width < 1024px){
     .grid {
+        grid-column: center-start;
         display: grid;
         // align-items: center;
         grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: column;
         grid-gap: 5 px;
         padding-bottom: 120px;
+        overflow: scroll;
+        padding-left: var(--page-margin);
+        padding-right: var(--page-margin);
         background-color: azure;
-        justify-content: space-around;
+        justify-content: flex-start;
     }  
 }
 
-//I believe this should work correctly
+//I believe this should work correctly - containers start hanging off the "page" at 1285px
 @media (width > 1260px) {
     .grid {
         display: grid;
