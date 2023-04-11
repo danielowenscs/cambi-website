@@ -27,7 +27,7 @@ import { strings } from '@/assets/strings';
 @import '@/assets/styles/styles.scss';
 .container-1 {
     //height: 192px;
-    background-color: azure;
+    background-color: white;
     padding-top: 120px;
     //position: absolute;
     //top: 664px;
@@ -42,7 +42,7 @@ import { strings } from '@/assets/strings';
     align-items: center;
     padding: 40px 0px;
     gap: 40px;
-    background-color: antiquewhite;
+    background-color: white;
     height: 190px;
 }
 </style>
