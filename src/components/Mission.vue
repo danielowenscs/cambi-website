@@ -23,6 +23,12 @@ export default {
 <style lang='scss' scoped>
  @import '@/assets/styles/styles.scss';
 
+button { 
+    border: none;
+    color: $Se2;
+    width: 65px;
+}
+
 .container {
     background-color: $Se1;
     height: 512px;
@@ -37,13 +43,14 @@ export default {
 .N6 {
     color: $N6;
 }
+
 .item{
 
 }
 .item-2{
     
 }
-.item-3 {
-    width: 65px;
-}
+// .item-3 {
+//     width: 65px;
+// }
 </style>

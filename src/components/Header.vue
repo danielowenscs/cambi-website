@@ -5,7 +5,7 @@
                 <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
             </div>
             <div class="right">
-                <Button class="B1 Primary-Button">Join Us</Button>
+                <Button class="B1 Primary-Button">Join Cambi</Button>
             </div>
         </div>
     </header>
@@ -14,7 +14,12 @@
 <script>
 
 export default {
-    name: 'Header',
+    name: 'Header', 
+    data() {
+        return {
+            
+        }
+    }
 }
 </script>
 

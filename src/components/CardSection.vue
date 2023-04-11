@@ -2,7 +2,7 @@
 <scrolly>
 <div class="grid">
     <div class="container">
-        <div class="B2 item-1" >{{ card1 }}</div>
+        <div class="B2">{{ card1 }}</div>
         <div class="H2">{{ card2 }}</div>  
         <div class="B1">{{ card3 }}</div>  
     </div>
@@ -56,12 +56,18 @@ scrolly {
     grid-template-columns: var(--page-margin) [center-start] 1fr [center-end] var(--page-margin);
 }
 
+
+.B2 {
+    text-align: left;
+    color: $Se2;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   padding-bottom: 120px;
-  background-color: azure;
+  background-color: white;
   justify-content: center;
 }
 .container{
@@ -71,23 +77,19 @@ scrolly {
     align-items: center;
     padding: 64px 32px;
     gap: 32px;
-    background-color:antiquewhite;
-    width: 348px;
+    background-color: $Se6;
+    width: 300px;
+    height: 544px;
     border-radius: 16px;
     justify-content: flex-start;
     
 }
-.item-1 {
-    text-align: left !important;
-    color: $Se2;
-}
 
-//WIP
+// ITWORKS
 @media (width < 1024px){
     .grid {
         grid-column: center-start;
         display: grid;
-        // align-items: center;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-flow: column;
         grid-gap: 5 px;
@@ -95,7 +97,7 @@ scrolly {
         overflow: scroll;
         padding-left: var(--page-margin);
         padding-right: var(--page-margin);
-        background-color: azure;
+        background-color: white;
         justify-content: flex-start;
     }  
 }
@@ -107,7 +109,7 @@ scrolly {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 16 px;
         padding-bottom: 120px;
-        background-color: azure;
+        background-color: white;
         justify-content: space-around;
         padding-left: 33%;
         padding-right: 33%;
