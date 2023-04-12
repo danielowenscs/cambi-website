@@ -62,6 +62,16 @@ scrolly {
     color: $Se2;
 }
 
+.H2 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.B1 {
+    width: auto;
+    height: 169px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -74,7 +84,7 @@ scrolly {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     padding: 64px 32px;
     gap: 32px;
     background-color: $Se6;
