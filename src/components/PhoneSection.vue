@@ -3,16 +3,14 @@
     <div class="container">
         <div class="grid">
             <div class="content">
-                <div class="box">
-                    <div class="innercontainer">
-                        <div class="H2">{{ phone1 }}</div>
-                        <div class="B1">{{ phone2 }}</div>
-                        <button class="button">Join Cambi</button>
-                    </div>
-                    <div class="telly">
-                    <img src="@/assets/imgs/phone.png">
-                    </div> 
-                </div>
+                 <div class="column1of2">
+                    <div class="H2">{{ phone1 }}</div>
+                    <div class="B1">{{ phone2 }}</div>
+                    <button class="button">Join Cambi</button>
+                 </div>
+                <div class="column2of2">
+                <img  src="@/assets/imgs/phone.png">
+                </div> 
             </div>
         </div>
     </div>
@@ -66,8 +64,15 @@ img {
     grid-column: 2/11;
 }
 
-.innercontainer {
-    width: 457px;
+.column1of2 {
+    height: 448px;
+    width: 66%;
+    float: left;
+}
+.column2of2 {
+    height: 448px;
+    width: 33%;
+    float: left;
 }
 .background {
     background: $Se6;
@@ -91,6 +96,7 @@ img {
 .H2 { 
     padding-top: 32px;
     padding-bottom: 32px;
+    display: inline;
 }
 
 .B1 { 

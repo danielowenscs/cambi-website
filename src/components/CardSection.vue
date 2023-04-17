@@ -91,7 +91,7 @@ scrolly {
     width: 300px;
     height: 544px;
     border-radius: 16px;
-    justify-content: flex-start;
+    justify-content: inherit;
     
 }
 
