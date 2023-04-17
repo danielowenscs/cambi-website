@@ -110,6 +110,20 @@ scrolly {
         background-color: white;
         justify-content: flex-start;
     }  
+    .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 64px 32px;
+    gap: 32px;
+    background-color: $Se6;
+    width: 272px;
+    height: 372px;
+    border-radius: 16px;
+    justify-content: flex-start;
+    
+    }
 }
 
 //I believe this should work correctly - containers start hanging off the "page" at 1285px
