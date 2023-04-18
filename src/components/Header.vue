@@ -1,14 +1,13 @@
 <template>
-    <header>
-        <div class="container">
-            <div class="left">
-                <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
+    <body>
+        <header>
+            <div class="container">
+            <a class="logo"><img src="../assets/imgs/logo-cambi.png" alt="Website Logo"></a>
+            <button class="B1">Join Cambi</button>
             </div>
-            <div class="right">
-                <button class="B1 Primary-Button">Join Cambi</button>
-            </div>
-        </div>
-    </header>
+        </header>
+        <section class="banner"></section>
+    </body>
 </template>
 
 <script>
@@ -26,12 +25,19 @@ export default {
 <style lang='scss'>
 @import '@/assets/styles/styles.scss';
 
-img {
+
+
+body {
+    min-height: fit-content;
+}
+
+header .logo {
+    position: relative;
     width: 102px; 
     height: 20px;
 }
 
-button {
+header button {
     border-radius: 40px;
     width: 209px;
     height: 56px;
@@ -41,20 +47,32 @@ button {
     text-emphasis-color: $P1;
 }
 
-.container {
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
     padding-left: 1.5%;
     padding-right: 1.5%;
     padding-top: 30px;
+    // z-index: 100000;
 }
 
-.left {
-    text-align: left;
+header .container { 
+    position: relative;
+    margin: 0 15px;
 }
 
-.right {
-    text-align: right;
+.banner {
+    position: relative;
+    max-width: 1260px;
+    height: auto;
+    background-size: cover;
+
 }
 
 </style>

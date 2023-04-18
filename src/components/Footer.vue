@@ -1,14 +1,14 @@
 //Directly copied from the header and needs heavy altering
 <template>
-    <header>
+    <footer>
         <div class="background">
             <div class="container">
                 <div class="left">
-                    <!-- <img src="../assets/imgs/logo-cambi.png" alt="Website Logo"> -->
+                    <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
                 </div>
             </div>
         </div>
-    </header>
+    </footer>
 </template>
 
 <script>
