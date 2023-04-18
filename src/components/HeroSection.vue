@@ -13,9 +13,11 @@
 </template>
 <script>
 import strings from '@/assets/strings'
+import Header from './Header.vue';
 
 export default {
     name: 'HeroSection',
+    
     data () {
         return {
 
@@ -25,6 +27,7 @@ export default {
 </script>
 <style lang = 'scss' scoped>
 @import '@/assets/styles/styles.scss';
+
 html {
     font-size: 62.5% !important;
 }
@@ -51,8 +54,7 @@ body {
     grid-column: 2/11;
     text-align: center;
 }
-h1 {
-}
+
 div.content > * {
     margin: 40px 0 0 0;
     justify-content: flex-start;

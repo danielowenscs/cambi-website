@@ -10,7 +10,7 @@ import Home from './views/Home.vue'
 export default { 
   components: {
     Home,
-    JoinForm
+    
 }
 }
 </script>

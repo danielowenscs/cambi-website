@@ -1,21 +1,20 @@
 //Directly copied from the header and needs heavy altering
-<!-- <template>
+<template>
     <header>
-        <div class="container">
-            <div class="left">
-                <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
-            </div>
-            <div class="right">
-                <Button class="B1 Primary-Button">Join Cambi</Button>
+        <div class="background">
+            <div class="container">
+                <div class="left">
+                    <!-- <img src="../assets/imgs/logo-cambi.png" alt="Website Logo"> -->
+                </div>
             </div>
         </div>
     </header>
 </template>
 
 <script>
-
+import strings from '@/assets/strings'
 export default {
-    name: 'Header', 
+    name: 'Footer', 
     data() {
         return {
             
@@ -32,6 +31,10 @@ img {
     height: 20px;
 }
 
+.background {
+    background-color: $N1;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -44,8 +47,5 @@ img {
     text-align: left;
 }
 
-.right {
-    text-align: right;
-}
 
-</style> -->
+</style>

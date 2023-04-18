@@ -5,7 +5,7 @@
                 <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
             </div>
             <div class="right">
-                <Button class="B1 Primary-Button">Join Cambi</Button>
+                <button class="B1 Primary-Button">Join Cambi</button>
             </div>
         </div>
     </header>
@@ -29,6 +29,16 @@ export default {
 img {
     width: 102px; 
     height: 20px;
+}
+
+button {
+    border-radius: 40px;
+    width: 209px;
+    height: 56px;
+    padding: 16px;
+    background-color: $Se2;
+    border-color: none;
+    text-emphasis-color: $P1;
 }
 
 .container {
