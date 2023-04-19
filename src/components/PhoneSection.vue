@@ -6,7 +6,7 @@
                  <div class="column1of2">
                     <div class="H2">{{ phone1 }}</div>
                     <div class="B1">{{ phone2 }}</div>
-                    <button class="button">Join Cambi</button>
+                    <a href="/components/JoinForm.vue"><button class="button">Join Cambi</button></a>
                  </div>
                 <div class="column2of2">
                 <img  src="@/assets/imgs/phone.png">

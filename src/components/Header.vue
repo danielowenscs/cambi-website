@@ -2,7 +2,7 @@
     <body>
         <header>
             <div class="container">
-            <a class="logo"><img src="../assets/imgs/logo-cambi.png" alt="Website Logo"></a>
+            <a href="/components/JoinForm.vue" class="logo"><img src="../assets/imgs/logo-cambi.png" alt="Website Logo"></a>
             <button class="B1">Join Cambi</button>
             </div>
         </header>

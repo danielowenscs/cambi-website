@@ -5,7 +5,7 @@
                 <div class="content">
                 <h1 class="H1">Shop Mindfully</h1>
                 <p class="B1">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</p>
-                <button class="B1 button">Join Cambi</button>
+                <a href="/components/JoinForm.vue"><button class="B1 button">Join Cambi</button></a>
                 </div>
             </div>
         </div>
@@ -13,7 +13,6 @@
 </template>
 <script>
 import strings from '@/assets/strings'
-import Header from './Header.vue';
 
 export default {
     name: 'HeroSection',
