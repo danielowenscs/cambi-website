@@ -1,9 +1,20 @@
-import { createApp } from 'vue'
-import './assets/styles/styles.scss'
+import { createApp } from 'vue';
 import App from './App.vue';
+import {createRouter, createWebHistory} from 'vue-router';
+import Home from './views/Home.vue';
+import JoinForm from './components/JoinForm.vue';
 
+const routes = [
+    { path: '/', component: Home },
+    { path: '/joinus', component: JoinForm }
+  ];
 
-createApp(App).mount('#app');
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+})
 
-
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
 

@@ -2,8 +2,12 @@
     <body>
         <header>
             <div class="container">
-            <a href="/components/JoinForm.vue" class="logo"><img src="../assets/imgs/logo-cambi.png" alt="Website Logo"></a>
-            <button class="B1">Join Cambi</button>
+            <router-link to="/" class="logo">
+                <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
+            </router-link>
+            <router-link to="/joinus">
+                <button class="B1">Join Cambi</button>
+            </router-link>
             </div>
         </header>
         <section class="banner"></section>
@@ -22,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
 
 
@@ -45,6 +49,7 @@ header button {
     background-color: $Se2;
     border-color: none;
     text-emphasis-color: $P1;
+    visibility: hidden;
 }
 
 header {
@@ -59,7 +64,6 @@ header {
     padding-left: 1.5%;
     padding-right: 1.5%;
     padding-top: 30px;
-    // z-index: 100000;
 }
 
 header .container { 

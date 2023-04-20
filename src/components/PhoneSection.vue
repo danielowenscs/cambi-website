@@ -6,7 +6,9 @@
                  <div class="column1of2">
                     <div class="H2">{{ phone1 }}</div>
                     <div class="B1">{{ phone2 }}</div>
-                    <a href="/components/JoinForm.vue"><button class="button">Join Cambi</button></a>
+                    <router-link to="/joinus">
+                        <button class="button">Join Cambi</button>
+                    </router-link>
                  </div>
                 <div class="column2of2">
                 <img  src="@/assets/imgs/phone.png">
@@ -37,6 +39,7 @@ img {
     float: inline-end; 
     height: 448px;
     width: 210px;
+    flex-direction: column;
 }
 
 .telly{
@@ -64,16 +67,16 @@ img {
     grid-column: 2/11;
 }
 
-.column1of2 {
-    height: 448px;
-    width: 66%;
-    float: left;
-}
-.column2of2 {
-    height: 448px;
-    width: 33%;
-    float: left;
-}
+// .column1of2 {
+//     height: 448px;
+//     width: 66%;
+//     float: left;
+// }
+// .column2of2 {
+//     height: 448px;
+//     width: 33%;
+//     float: left;
+// }
 .background {
     background: $Se6;
     height: 688px;

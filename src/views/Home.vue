@@ -1,17 +1,10 @@
 <template>
-    <div class="container">
-        <div class="grid">
-            <div class="content">
-                <Header/>
-                <HeroSection/>
-                <MeetCambi/>
-                <CardSection/>
-                <PhoneSection/>
-                <Footer/>
-            </div>
-        </div>
-    </div>
-    
+    <Header/>
+    <HeroSection/>
+    <MeetCambi/>
+    <CardSection/>
+    <PhoneSection/>
+    <Footer/>
 </template>
 
 <script>
@@ -34,25 +27,9 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
 
-// .container {
-//     max-width: 1260px;
-//     margin: auto;
-// }
-// .grid {
-//     padding: 120px 40px;
-//     margin: auto;
-//     height: 400px;
-//     gap: 20px;
-//     display: grid;
-//     grid-template-columns: repeat(12, 1fr);
-// }
-// .content {
-//     grid-column: 2/11;
-//     text-align: center;
-//     max-width: 1260px;
-// }
+
 
 </style>

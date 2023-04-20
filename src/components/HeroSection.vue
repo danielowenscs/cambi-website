@@ -5,7 +5,9 @@
                 <div class="content">
                 <h1 class="H1">Shop Mindfully</h1>
                 <p class="B1">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</p>
-                <a href="/components/JoinForm.vue"><button class="B1 button">Join Cambi</button></a>
+                <router-link to="/joinus">
+                    <button class="B1 button">Join Cambi</button>
+                </router-link>
                 </div>
             </div>
         </div>

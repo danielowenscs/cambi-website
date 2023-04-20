@@ -11,13 +11,15 @@
       <button type="submit"> Create User</button>
     </form>
 
+    <router-link to="/">
+      <button class="B1 button">Go Back Home</button>
+    </router-link>
+    <Footer/>
   </body>
-  <Footer/>
 </template>
 <script>
-import {usersCollection} from '../firebase'
+import { usersCollection } from '../firebase'
 import { addDoc } from 'firebase/firestore'
-
 
 export default {
     name: "JoinForm",
