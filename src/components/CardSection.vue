@@ -62,11 +62,6 @@ scrolly {
     color: $Se2;
 }
 
-.H2 {
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
 .B1 {
     width: auto;
     height: 169px;

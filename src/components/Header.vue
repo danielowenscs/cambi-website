@@ -30,17 +30,6 @@ export default {
       header.classList.toggle("sticky", window.scrollY > 0);
     }
   }
-//     data() {
-//         return {
-            
-//         }
-//     },
-//     methods: {
-//     window,addEventListener("scroll", function(){
-//     var header = document.querySelector("header");
-//     header.classList.toggle("sticky", window.scrollY > 0)
-//   })
-//     }
 }
 </script>
 

@@ -3,15 +3,15 @@
     <div class="container">
         <div class="grid">
             <div class="content">
-                 <div class="column1of2">
+                 <div class="text">
                     <div class="H2">{{ phone1 }}</div>
                     <div class="B1">{{ phone2 }}</div>
                     <router-link to="/joinus">
                         <button class="button">Join Cambi</button>
                     </router-link>
-                 </div>
-                <div class="column2of2">
-                <img  src="@/assets/imgs/phone.png">
+                </div>
+                <div class="telly">
+                <img src="@/assets/imgs/phone.png" >
                 </div> 
             </div>
         </div>
@@ -35,22 +35,6 @@ export default {
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
 
-img {
-    float: inline-end; 
-    height: 448px;
-    width: 210px;
-    flex-direction: column;
-}
-
-.telly{
-    float: right;
-}
-
-.box {
-    width: 980px;
-    height: 448px;
-}
-
 .container {
     max-width: 1260px;
     margin: auto;
@@ -64,19 +48,24 @@ img {
     grid-template-columns: repeat(12, 1fr);
 }
 .content {
-    grid-column: 2/11;
+    grid-column: 1/ 12;
 }
 
-// .column1of2 {
-//     height: 448px;
-//     width: 66%;
-//     float: left;
-// }
-// .column2of2 {
-//     height: 448px;
-//     width: 33%;
-//     float: left;
-// }
+.text {
+    grid-column: 1/ 12;
+    grid-column-end: span 5;
+}
+
+.telly {
+    grid-column: 8/ 12;
+    grid-column-end: span 3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .background {
     background: $Se6;
     height: 688px;
