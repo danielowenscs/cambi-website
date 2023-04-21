@@ -18,11 +18,29 @@
 
 export default {
     name: 'Header', 
-    data() {
-        return {
-            
-        }
+    mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
     }
+  }
+//     data() {
+//         return {
+            
+//         }
+//     },
+//     methods: {
+//     window,addEventListener("scroll", function(){
+//     var header = document.querySelector("header");
+//     header.classList.toggle("sticky", window.scrollY > 0)
+//   })
+//     }
 }
 </script>
 
@@ -35,12 +53,6 @@ body {
     min-height: fit-content;
 }
 
-header .logo {
-    position: relative;
-    width: 102px; 
-    height: 20px;
-}
-
 header button {
     border-radius: 40px;
     width: 209px;
@@ -48,7 +60,7 @@ header button {
     padding: 16px;
     background-color: $Se2;
     border-color: none;
-    text-emphasis-color: $P1;
+    text-emphasis: $P1;
     visibility: hidden;
 }
 
@@ -64,19 +76,27 @@ header {
     padding-left: 1.5%;
     padding-right: 1.5%;
     padding-top: 30px;
+    z-index: 999;
 }
+
+header .logo {
+    position: relative;
+    width: 102px; 
+    height: 20px;
+}
+
 
 header .container { 
     position: relative;
     margin: 0 15px;
+    
 }
-
-.banner {
+section .banner {
     position: relative;
-    max-width: 1260px;
-    height: auto;
+    max-width: 100%;
+    height: 100vh;
     background-size: cover;
-
+    background: linear-gradient(-45deg, #312D9F, #4858D7);
 }
 
 </style>

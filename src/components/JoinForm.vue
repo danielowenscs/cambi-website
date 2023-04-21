@@ -20,17 +20,19 @@
 <script>
 import { usersCollection } from '../firebase'
 import { addDoc } from 'firebase/firestore'
+import Footer from '@/components/Footer.vue';
 
 export default {
     name: "JoinForm",
-    // components: {
-    //   Footer
-    // },
+    components: {
+      Footer
+    },
     data () {
     return {
         name: null,
         email: null,
     }
+   
 },
 methods: {
   async createUser () {
