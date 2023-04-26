@@ -19,7 +19,7 @@
 </div>
 </template>
 <script>
-import { strings } from '@/assets/strings';
+import { strings } from '@/assets/strings.js';
 
 export default {
    name: 'PhoneSection',
@@ -31,6 +31,7 @@ export default {
    }
 
 }
+
 </script>
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
@@ -48,16 +49,16 @@ export default {
     grid-template-columns: repeat(12, 1fr);
 }
 .content {
-    grid-column: 1/ 12;
+    grid-column: 1/ 12fr;
 }
 
 .text {
-    grid-column: 1/ 12;
+    grid-column: 1/ 12fr;
     grid-column-end: span 5;
 }
 
 .telly {
-    grid-column: 8/ 12;
+    grid-column: 8/ 12fr;
     grid-column-end: span 3;
 }
 
