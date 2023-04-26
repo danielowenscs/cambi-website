@@ -1,19 +1,32 @@
 <template>
   <body>
-    <h1>Join The Cambi Community</h1>
-    <p>Sign up for exclusive updates and early access!</p>
+    <div class="background">
+        <div class="container">
+            <div class="grid">
+              <div class="content">
+                <h1>Join The Cambi Community</h1>
+              <p>Sign up for exclusive updates and early access!</p>
     
-    <form @submit.prevent="createUser">
-      <label>Name</label>
-      <input v-model="name" required/>
-      <label>Email</label>
-      <input v-model="email" type="email" required>
-      <button type="submit"> Create User</button>
-    </form>
+              <form @submit.prevent="createUser">
+                <label>Name</label>
+                <input v-model="name" placeholder="Name" required/>
+                <br>
+                <label>Email</label>
+                <input v-model="email" type="email" placeholder="Email" required>
+                <br>
+                <label>Phone Number(optional)</label>
+                <input v-model="phonenum" placeholder="Phone Number(optional)">
+                <br>
+                <button type="submit"> Create User</button>
+              </form>
 
-    <router-link to="/">
-      <button class="B1 button">Go Back Home</button>
-    </router-link>
+            <router-link to="/">
+              <button class="B1 button">Go Back Home</button>
+            </router-link>
+              </div>
+            </div>
+        </div>
+    </div>
     <Footer/>
   </body>
 </template>
@@ -49,7 +62,35 @@ methods: {
 
 
 body {
-  background-color: $N6;
   font-family: Inter;
 }
+
+h1 {
+  position: center;
+}
+
+.background {
+    background: $N6;
+}
+.container {
+    max-width: 1260px;
+    margin: auto;
+}
+.grid {
+    padding: 120px 40px;
+    margin: auto;
+    height: 400px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.content {
+    grid-column: 2/11;
+    text-align: center;
+}
+
+form {
+  grid-column: 5 / 12;
+}
+
 </style>

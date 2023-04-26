@@ -49,20 +49,22 @@ export default {
     grid-template-columns: repeat(12, 1fr);
 }
 .content {
-    grid-column: 1/ 12fr;
+    grid-column: 1fr/ 12;
 }
 
 .text {
-    grid-column: 1/ 12fr;
+    grid-column: 2fr/ 12;
     grid-column-end: span 5;
 }
 
 .telly {
-    grid-column: 8/ 12fr;
+    grid-column: 8fr/ 12;
     grid-column-end: span 3;
 }
 
 img {
+    display: block;
+    margin: 50px auto 0;
     max-width: 100%;
     height: auto;
 }
@@ -77,13 +79,11 @@ img {
     font-weight: 400;
     line-height: 24px;
     font-size: 18px;
-    
     border-radius: 40px;
-    width: 159px;
-    // height: 56px;
+    width: 209px;
     padding: 16px;
     background-color: $Se2;
-    border-color: none;
+    border: none;
 }
 
 .H2 { 

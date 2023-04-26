@@ -61,15 +61,14 @@ div.content > * {
     justify-content: flex-start;
     color: $N6;
 }
-.button {
-    border-radius: 40px;
-    width: 209px;
-    //height: 56px;
-    padding: 16px;
-    background-color: $Se2;
-    border-color: none;
-}
 
+.button {
+  border-radius: 40px;
+  width: 209px;
+  padding: 16px;
+  background-color: $Se2;
+  border: none;
+}
 
 
 </style>
