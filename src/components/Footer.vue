@@ -4,17 +4,12 @@
             <div class="container">
                 <div class="grid">
                     <div class="content">
-
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="left">
                     <img src="../assets/imgs/logo-cambi.png" alt="Website Logo" class="logo">
                     <h5 class="H4">{{ head }}</h5>
                     <p class="B3">{{ line }}</p>
-                    <img src="../assets/imgs/_Instagram.png" alt="Instagram" class="instagram">
-                    <img src="../assets/imgs/_Discord.png" alt="Discord" class="discord">
+                    <img src="../assets/imgs/_Instagram.png" alt="Instagram" class="icon">
+                    <img src="../assets/imgs/_Discord.png" alt="Discord" class="icon">
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,18 +37,12 @@ img .logo {
     width: 102px; 
     height: 20px;
 }
-
-img .instagram {
+ .icon {
     width: 32px; 
     height: 32px;
-    margin: 10px;
+    margin-right: 32px;
 }
 
-img .discord {
-    width: 32px; 
-    height: 32px;
-    margin: 10px;
-}
 
 .container {
     max-width: 1260px;
@@ -62,33 +51,29 @@ img .discord {
 .grid {
     padding: 120px 40px;
     margin: auto;
-    height: 400px;
+    // height: 400px;
     gap: 20px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 .content {
-    grid-column: 2/11;
-    text-align: center;
+    grid-column: 1 / 4;
+    text-align: left;
+    justify-content: space-between;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: $P6;
 }
 
 .background {
     background-color: $N1;
 }
 
-.box {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.left {
-    text-align: left;
-    color: $P6;
-}
+// .left {
+//     text-align: left;
+// }
 
 
 </style>
