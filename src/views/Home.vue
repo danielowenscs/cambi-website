@@ -1,6 +1,5 @@
 <template>
-    <Header/>
-    <HeroSection/>
+    <HeroNavContainer/>
     <MeetCambi/>
     <CardSection/>
     <PhoneSection/>
@@ -14,6 +13,7 @@ import MeetCambi from '@/components/MeetCambi.vue';
 import CardSection from '@/components/CardSection.vue';
 import PhoneSection from '@/components/PhoneSection.vue';
 import Footer from '@/components/Footer.vue';
+import HeroNavContainer from '@/components/HeroNavContainer.vue';
 export default {
     name: 'Home',
     components: {
@@ -22,8 +22,9 @@ export default {
     MeetCambi,
     CardSection,
     PhoneSection,
-    Footer
-    }
+    Footer,
+    HeroNavContainer
+}
 }
 </script>
 

@@ -1,29 +1,26 @@
 <template>
-   <div class="background">
-        <div class="container">
-            <div class="grid">
-                <div class="content">
-                <h1 class="H1">Shop Mindfully</h1>
-                <p class="B1">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</p>
-                <router-link to="/joinus">
-                    <button class="B1 button">Join Cambi</button>
-                </router-link>
-                </div>
+    <div class="container">
+        <div class="grid">
+            <div class="content">
+            <h1 class="H1">Shop Mindfully</h1>
+            <p class="B1">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</p>
+            <button @click="goToJoinForm()" class="B1 button">Join Cambi</button>
             </div>
         </div>
-   </div>
+    </div>
 </template>
 <script>
 import strings from '@/assets/strings'
 
 export default {
     name: 'HeroSection',
-    
-    data () {
-        return {
-
-        }
+    methods: {
+    goToJoinForm() {
+      this.$router.push('/joinus')
     }
+  }
+    
+   
 }
 </script>
 <style lang = 'scss' scoped>

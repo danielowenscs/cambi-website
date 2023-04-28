@@ -18,21 +18,21 @@
 
 export default {
     name: 'Header', 
-    mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      var header = this.$refs.header;
-      header.classList.toggle("sticky", window.scrollY > 0);
-      if (header !== null){
-        header.classList.add('scrolled');
-      }
-    }
-  }
+//     mounted() {
+//     window.addEventListener("scroll", this.handleScroll);
+//   },
+//   beforeDestroy() {
+//     window.removeEventListener("scroll", this.handleScroll);
+//   },
+//   methods: {
+//     handleScroll() {
+//       var header = this.$refs.header;
+//       header.classList.toggle("sticky", window.scrollY > 0);
+//       if (header !== null){
+//         header.classList.add('scrolled');
+//       }
+//     }
+//   }
 }
 </script>
 
@@ -57,9 +57,9 @@ header button {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,7 @@ header {
     padding-left: 1.5%;
     padding-right: 1.5%;
     padding-top: 30px;
-    z-index: 999;
+    // z-index: 999;
 }
 
 header .logo {
@@ -78,11 +78,11 @@ header .logo {
 }
 
 
-header .container { 
-    position: relative;
-    margin: 0 15px;
+// header .container { 
+//     position: relative;
+//     margin: 0 15px;
     
-}
+// }
 section .banner {
     position: relative;
     max-width: 100%;
