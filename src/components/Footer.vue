@@ -33,11 +33,11 @@ export default {
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
 
-img .logo {
+.logo {
     width: 102px; 
     height: 20px;
 }
- .icon {
+.icon {
     width: 32px; 
     height: 32px;
     margin-right: 32px;
