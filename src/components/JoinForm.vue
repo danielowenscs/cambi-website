@@ -1,5 +1,4 @@
 <template>
-  <Header/>
   <body>
     <div class="background">
         <div class="container-g">
@@ -40,7 +39,6 @@ import Header from '@/components/Footer.vue';
 export default {
     name: "JoinForm",
     components: {
-      Header,
       Footer
     },
     data () {

@@ -2,18 +2,14 @@
 <div class="background">
     <div class="container">
         <div class="grid">
-            <div class="content">
                  <div class="text">
                     <div class="H2">{{ phone1 }}</div>
                     <div class="B1">{{ phone2 }}</div>
-                    <router-link to="/joinus">
-                        <button class="button">Join Cambi</button>
-                    </router-link>
+                    <button @click="goToJoinForm()" class="button">Join Cambi</button>
                 </div>
                 <div class="telly">
                 <img src="@/assets/imgs/phone.png" >
                 </div> 
-            </div>
         </div>
     </div>
 </div>
@@ -28,8 +24,12 @@ export default {
             phone1: strings.phone1,
             phone2: strings.phone2,
        }
-   }
-
+   },
+   methods: {
+    goToJoinForm() {
+      this.$router.push('/joinus')
+    }
+  }
 }
 
 </script>
@@ -48,22 +48,20 @@ export default {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
-.content {
-    grid-column: 1fr/ 12;
+
+.text, .telly { 
+    display: inline-box;
 }
 
 .text {
-    grid-column: 2fr/ 12;
-    grid-column-end: span 5;
+    grid-column: 2 / 6;
 }
 
 .telly {
-    grid-column: 8fr/ 12;
-    grid-column-end: span 3;
+    grid-column: 10 / 12;
 }
 
 img {
-    display: inline-block;
     margin: 50px auto 0;
     max-width: 100%;
     height: auto;
