@@ -1,7 +1,8 @@
 <template>
+  <Header/>
   <body>
     <div class="background">
-        <div class="container">
+        <div class="container-g">
             <div class="grid">
               <div class="content">
                 <h1>Join The Cambi Community</h1>
@@ -27,17 +28,19 @@
             </div>
         </div>
     </div>
-    <Footer/>
   </body>
+  <Footer/>
 </template>
 <script>
 import { usersCollection } from '../firebase'
 import { addDoc } from 'firebase/firestore'
 import Footer from '@/components/Footer.vue';
+import Header from '@/components/Footer.vue';
 
 export default {
     name: "JoinForm",
     components: {
+      Header,
       Footer
     },
     data () {
@@ -72,7 +75,7 @@ h1 {
 .background {
     background: $N6;
 }
-.container {
+.container-g {
     max-width: 1260px;
     margin: auto;
 }

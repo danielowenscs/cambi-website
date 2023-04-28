@@ -1,6 +1,6 @@
 <template>
     <body>
-        <header>
+        <header ref="header">
             <div class="container">
             <router-link to="/" class="logo">
                 <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
@@ -26,8 +26,11 @@ export default {
   },
   methods: {
     handleScroll() {
-      var header = document.querySelector("header");
+      var header = this.$refs.header;
       header.classList.toggle("sticky", window.scrollY > 0);
+      if (header !== null){
+        header.classList.add('scrolled');
+      }
     }
   }
 }

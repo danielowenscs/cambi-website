@@ -63,7 +63,7 @@ export default {
 }
 
 img {
-    display: block;
+    display: inline-block;
     margin: 50px auto 0;
     max-width: 100%;
     height: auto;

@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
 
 img .logo {
