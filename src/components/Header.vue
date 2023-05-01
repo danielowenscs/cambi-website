@@ -2,12 +2,8 @@
     <body>
         <header ref="header">
             <div class="container">
-            <router-link to="/" class="logo">
-                <img src="../assets/imgs/logo-cambi.png" alt="Website Logo">
-            </router-link>
-            <router-link to="/joinus">
-                <button class="B1">Join Cambi</button>
-            </router-link>
+            <img src="../assets/imgs/logo-cambi.png" @click="goHome()" alt="Website Logo">
+            <!-- <button @click="goToJoinForm()" class="B1">Join Cambi</button> -->
             </div>
         </header>
         <section class="banner"></section>
@@ -18,21 +14,14 @@
 
 export default {
     name: 'Header', 
-//     mounted() {
-//     window.addEventListener("scroll", this.handleScroll);
-//   },
-//   beforeDestroy() {
-//     window.removeEventListener("scroll", this.handleScroll);
-//   },
-//   methods: {
-//     handleScroll() {
-//       var header = this.$refs.header;
-//       header.classList.toggle("sticky", window.scrollY > 0);
-//       if (header !== null){
-//         header.classList.add('scrolled');
-//       }
-//     }
-//   }
+    methods: {
+    goToJoinForm() {
+      this.$router.push('/joinus')
+    },
+    goHome () {
+        this.$router.push('/')
+    }
+    }
 }
 </script>
 
