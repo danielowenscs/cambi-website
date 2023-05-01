@@ -42,8 +42,6 @@ export default {
     height: 32px;
     margin-right: 32px;
 }
-
-
 .container {
     max-width: 1260px;
     margin: auto;
@@ -52,12 +50,12 @@ export default {
     padding: 120px 40px;
     margin: auto;
     // height: 400px;
-    gap: 20px;
+    gap: 1rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 .content {
-    grid-column: 1 / 4;
+    grid-column: 2 / 5;
     text-align: left;
     justify-content: space-between;
     padding-left: 1.5%;
@@ -83,12 +81,33 @@ export default {
 
 // }
 
-// @media (1260px < width < 1024px){
+@media (max-width: 1024px){
+    .container {
+    // max-width: 1024px;
+    margin: auto;
+    }
+    .grid {
+    // padding: 120px 40px;
+    margin: auto;
+    // height: 400px;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    }
+    .content {
+    grid-column: 1 / 4;
+    text-align: left;
+    justify-content: space-between;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: $P6;
+    }
+}
 
-// }
-
-// @media (width > 1260px) {
-
+// @media (max-width: 1260px) {
+    
 // }
 
 </style>
