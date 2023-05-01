@@ -111,7 +111,7 @@ img {
     }
 
     .telly {
-        grid-column: 9 / 12;
+        grid-column: 10 / 12;
     }
 
     img {
@@ -122,14 +122,31 @@ img {
 
 }
 
-// @media (767px < width < 390px){
+@media (min-width: 768px) and (max-width: 1023px){
+    .container {
+        margin: auto;
+    }
+    .grid {
+        margin: auto;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
 
-// }
+    .text {
+        grid-column: 1 / 4;
+    }
 
-// @media (1023px < width < 768px){
+    .telly {
+        grid-column: 7 / 9;
+    }
 
-// }
-
+    img {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+}
 // @media (width > 1260px) {
 
 // }
