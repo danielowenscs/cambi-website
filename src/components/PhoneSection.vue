@@ -62,9 +62,9 @@ export default {
 }
 
 img {
-    margin: 50px auto 0;
+    margin: auto;
     max-width: 100%;
-    height: auto;
+    max-height: auto;
 }
 
 .background {
@@ -95,15 +95,38 @@ img {
     padding-bottom: 32px;
 }
 
+@media (max-width: 1024px){
+    .container {
+        margin: auto;
+    }
+    .grid {
+        margin: auto;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .text {
+        grid-column: 2 / 6;
+    }
+
+    .telly {
+        grid-column: 9 / 12;
+    }
+
+    img {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
 // @media (767px < width < 390px){
 
 // }
 
 // @media (1023px < width < 768px){
-
-// }
-
-// @media (1260px < width < 1024px){
 
 // }
 
