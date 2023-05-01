@@ -75,5 +75,20 @@ export default {
 //     text-align: left;
 // }
 
+// @media (767px < width < 390px){
+
+// }
+
+// @media (1023px < width < 768px){
+
+// }
+
+// @media (1260px < width < 1024px){
+
+// }
+
+// @media (width > 1260px) {
+
+// }
 
 </style>
