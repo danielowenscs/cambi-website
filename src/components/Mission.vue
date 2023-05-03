@@ -45,12 +45,12 @@ button {
     color: $N6;
 }
 
-.item{
+// .item{
 
-}
-.item-2{
+// }
+// .item-2{
     
-}
+// }
 // .item-3 {
 //     width: 65px;
 // }

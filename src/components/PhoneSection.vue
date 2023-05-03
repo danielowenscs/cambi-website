@@ -3,7 +3,7 @@
     <div class="container">
         <div class="grid">
                  <div class="text">
-                    <div class="H2">{{ phone1 }}</div>
+                    <div class="H2"><span class="color">{{ ready }}</span>{{ phone1 }}</div>
                     <div class="B1">{{ phone2 }}</div>
                     <button @click="goToJoinForm()" class="button">Join Cambi</button>
                 </div>
@@ -21,6 +21,7 @@ export default {
    name: 'PhoneSection',
    data () {
        return {
+            ready: strings.ready,
             phone1: strings.phone1,
             phone2: strings.phone2,
        }
@@ -35,6 +36,10 @@ export default {
 </script>
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
+
+.color {
+    color: $Se2;
+}
 
 .container {
     max-width: 1260px;
@@ -179,6 +184,7 @@ img {
     }
 
     img {
+        visibility: hidden;
         margin: auto;
         max-width: 100%;
         height: auto;

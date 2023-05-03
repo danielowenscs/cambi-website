@@ -23,7 +23,7 @@ export const strings = {
    
     // meet cambi section
     meet1: 'Meet Cambi',
-    meet2: 'The App that embodies your shopping values & transforms your shopping habits',
+    meet2: 'The app that embodies your shopping values & transforms your shopping habits',
 
 
     // card section
@@ -38,10 +38,12 @@ export const strings = {
     card9: 'Get product ratings based on your preferences, making shopping decisions painless.',
 
     // phone section
-    phone1: 'READY TO START?',
+    ready: 'READY',
+    phone1: ' TO START?',
     phone2: 'Sign up for Cambi and see how easy it is to align your purchases with your values.',
 
     // footer
     head: 'Have any questions?',
-    line: 'Ask us on Instagram, Discord or email us at cambiapp.scan@gmail.com',
+    line: 'Ask us on Instagram, Discord or email us at ',
+    email: 'cambiapp.scan@gmail.com',
 }

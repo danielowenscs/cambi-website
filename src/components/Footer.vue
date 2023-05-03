@@ -6,7 +6,7 @@
                     <div class="content">
                     <img src="../assets/imgs/logo-cambi.png" alt="Website Logo" class="logo">
                     <h5 class="H4">{{ head }}</h5>
-                    <p class="B3">{{ line }}</p>
+                    <p class="B3">{{ line }}<span class="color">{{ email }}</span></p>
                     <img src="../assets/imgs/_Instagram.png" alt="Instagram" class="icon">
                     <img src="../assets/imgs/_Discord.png" alt="Discord" class="icon">
                     </div>
@@ -25,6 +25,7 @@ export default {
         return {
             head: strings.head,
             line: strings.line,
+            email: strings.email,
         }
     }
 }
@@ -33,6 +34,9 @@ export default {
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
 
+.color {
+    color: $Se2;
+}
 .logo {
     width: 102px; 
     height: 20px;
