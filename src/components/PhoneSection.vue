@@ -4,12 +4,15 @@
         <div class="grid">
                  <div class="text">
                     <div class="H2"><span class="color">{{ ready }}</span>{{ phone1 }}</div>
-                    <div class="B1">{{ phone2 }}</div>
-                    <button @click="goToJoinForm()" class="button">Join Cambi</button>
+                    <div class="B1">{{ phone2 }}</div>    
                 </div>
                 <div class="telly">
                 <img src="@/assets/imgs/phone.png" >
                 </div> 
+                <div class="b-cont">
+                    <button @click="goToJoinForm()" class="button">Join Cambi</button>
+                </div>
+                
         </div>
     </div>
 </div>
@@ -44,6 +47,7 @@ export default {
 .container {
     max-width: 1260px;
     margin: auto;
+    align-items: center;
 }
 .grid {
     padding: 120px 40px;
@@ -60,10 +64,20 @@ export default {
 
 .text {
     grid-column: 2 / 6;
+    grid-row: 1;
+    margin: auto;
+    margin-bottom: 0;
 }
 
 .telly {
+    position: relative;
     grid-column: 10 / 12;
+    grid-row: 1 / 3;
+}
+
+.b-cont {
+    grid-column: 2 / 6;
+    grid-row: 2;
 }
 
 img {
@@ -77,6 +91,7 @@ img {
     height: 688px;
 }
 
+
 .button {
     font-family: 'Inter';
     font-weight: 400;
@@ -84,9 +99,11 @@ img {
     font-size: 18px;
     border-radius: 40px;
     width: 209px;
+    height: 56px;
     padding: 16px;
     background-color: $Se2;
     border: none;
+    postion: relative;
 }
 
 .H2 { 
@@ -117,6 +134,10 @@ img {
 
     .telly {
         grid-column: 10 / 12;
+    }
+    .b-cont {
+    grid-column: 1 / 6;
+    grid-row: 2;
     }
 
     img {
@@ -149,6 +170,11 @@ img {
         grid-column: 7 / 9;
     }
 
+    .b-cont {
+        grid-column: 1 / 6;
+        grid-row: 2;
+    }
+
     img {
         margin: auto;
         max-width: 100%;
@@ -178,16 +204,20 @@ img {
     }
 
     .telly {
-        grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column: 2 / 3;
         grid-row: 2;
+        align-items: center;
+    }
+
+    .b-cont {
+        grid-column: 2 / 4;
+        grid-row: 3;
     }
 
     img {
-        visibility: hidden;
         margin: auto;
-        max-width: 100%;
-        height: auto;
+        width: 100%;
+        max-height: auto;
     }
 }
 
