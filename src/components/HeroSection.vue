@@ -33,9 +33,6 @@ body {
     max-width: 1260px;
     margin:auto;
 }
-.background {
-    background: linear-gradient(-45deg, #312D9F, #4858D7);
-}
 .container {
     max-width: 1260px;
     margin: auto;
@@ -49,7 +46,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
 }
 .content {
-    grid-column: 2/11;
+    grid-column: 3/11;
     text-align: center;
 }
 
@@ -65,6 +62,63 @@ div.content > * {
   padding: 16px;
   background-color: $Se2;
   border: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .container {
+        // max-width: 1260px;
+        margin: auto;
+    }
+    .grid {
+        // padding: 120px 40px;
+        margin: auto;
+        // height: 400px;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .content {
+        grid-column: 1 / 5;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .container {
+        // max-width: 1260px;
+        margin: auto;
+    }
+    .grid {
+        // padding: 120px 40px;
+        margin: auto;
+        // height: 400px;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .content {
+        grid-column: 1 / 9;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1260px){
+    .container {
+        // max-width: 1260px;
+        margin: auto;
+    }
+    .grid {
+        // padding: 120px 40px;
+        margin: auto;
+        // height: 400px;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .content {
+        grid-column: 3 / 11;
+        text-align: center;
+    }
 }
 
 
