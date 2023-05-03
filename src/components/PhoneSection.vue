@@ -123,6 +123,9 @@ img {
 }
 
 @media (min-width: 768px) and (max-width: 1023px){
+    .background {
+        height: 608px;
+    }
     .container {
         margin: auto;
     }
@@ -149,7 +152,10 @@ img {
 }
 
 @media (min-width: 320px) and (max-width: 767px){
-    
+    .background {
+        height: 752px;
+    }
+
     container {
         margin: auto;
     }
@@ -163,11 +169,12 @@ img {
     .text {
         grid-column-start: 1;
         grid-row: 1;
+        text-align: center;
     }
 
     .telly {
         grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-end: 4;
         grid-row: 2;
     }
 

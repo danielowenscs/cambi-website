@@ -39,6 +39,7 @@ button {
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
     justify-content: center;
+    text-align: center;
 }
 .N6 {
     color: $N6;
