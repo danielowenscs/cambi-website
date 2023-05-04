@@ -243,6 +243,12 @@ export default {
         width: 8.5rem;
         max-height: 18rem;
     }
+    .B1 { 
+    padding-top: 32px;
+    padding-bottom: 32px;
+    max-width: 500px;
+    margin:auto;
+    }
 }
 
 </style>
