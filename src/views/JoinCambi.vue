@@ -1,8 +1,8 @@
 <template>
+    <header>
+            <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
+    </header>
     <body>
-        <header>
-            <img src="../assets/imgs/logo-cambi.png" @click="goHome()" alt="Website Logo">
-        </header>
         <div class="container">
             <h1 class="H2" >Join the Cambi Community</h1>
             <div class="spacing-16px"></div>
@@ -51,6 +51,9 @@
       const addedDoc = await addDoc(usersCollection, this.$data);
       console.log(addDoc, addedDoc);
     },
+    goHome () {
+            this.$router.push('/')
+        }
   }
   }
   </script>
@@ -61,14 +64,28 @@
     body {
         background-color: $N5;
         margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
-        width: 50%;
+        width: 100%;
+        height: 100%;
     }
 
     img {
-        margin-left: 1rem;
+        margin: 1rem;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 30px;
+        background-color: $N5;
     }
 
     .container {
+        margin: auto;
         width: 980px;
         height: 520px;
     }
