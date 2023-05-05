@@ -2,7 +2,7 @@
     <body>
         <header ref="header">
             <div class="container">
-            <img src="../assets/imgs/logo-cambi.png" @click="goHome()" alt="Website Logo">
+            <img src="../assets/imgs/logo-cambi.png" @click="refresh()" alt="Website Logo">
             <!-- <button @click="goToJoinForm()" class="B1">Join Cambi</button> -->
             </div>
         </header>
@@ -18,11 +18,15 @@ export default {
         goToJoinForm() {
             this.$router.push('/joinus')
         },
-        goHome () {
-            this.$router.push('/')
-        }
+        // goHome () {
+        //     this.$router.push('/')
+        // },
+        refresh() {
+            this.$forceUpdate('/'); //codepen
     }
+  }
 }
+
 </script>
 
 <style lang='scss' scoped>

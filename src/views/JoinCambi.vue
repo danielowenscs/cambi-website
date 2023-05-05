@@ -1,9 +1,10 @@
 <template>
-    <header>
-            <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
-    </header>
     <body>
-        <div class="container">
+        <header>
+            <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
+        </header>
+        <main>
+            <div class="container">
             <h1 class="H2" >Join the Cambi Community</h1>
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
@@ -20,8 +21,13 @@
                 <div class="spacing-16px"></div>
                 <div class="spacing-16px"></div>
                 <input type="text" class="B3">
+                <div class="spacing-16px"></div>
+                <div class="spacing-16px"></div>
+                <button type="submit"> Submit </button>
             </form>
         </div>
+        </main>
+        <!-- <button class="B1 button" onclick="">Go Back Home</button> -->
     </body>
   </template>
   <script>
@@ -61,11 +67,25 @@
   <style lang="scss" scoped>
   @import '@/assets/styles/styles.scss';
 
+    html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     body {
         background-color: $N5;
         margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
         width: 100%;
-        height: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    main {
+        display: flex;   
+        align-items: center;
+        justify-content: center;   
     }
 
     img {
@@ -74,20 +94,19 @@
 
     header {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        display:inline;
+        // justify-content: space-between;
         align-items: center;
         transition: 0.6s;
         padding-left: 1.5%;
         padding-right: 1.5%;
         padding-top: 30px;
-        background-color: $N5;
     }
 
     .container {
         margin: auto;
         width: 980px;
-        height: 520px;
+        // height: 100%;
     }
     .spacing-16px{
         height: 16px;
@@ -112,13 +131,27 @@
         background-color: $N6;
         border: 1px solid $Se6;
         padding: 16px 20px;
-        width: 380px;
+        width: 338px;
         border-radius: 4px;
     }
 
     input:focus{
         outline: 1px solid $Se2;
         background-color: $Se6
+    }
+
+    button {
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 18px;
+        border-radius: 40px;
+        width: 380px;
+        height: 56px;
+        padding: 16px;
+        background-color: $Se2;
+        text-emphasis-color: $P1;
+        border: none;
     }
 
 
