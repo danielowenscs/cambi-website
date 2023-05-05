@@ -14,7 +14,9 @@
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
             <form >
-                <input type="email" class="B3">
+                <div class="input-container">
+                    <input type="email" class="B3">
+                </div>
                 <div class="spacing-16px"></div>
                 <div class="spacing-16px"></div>
                 <input type="tel" class="B3">
@@ -78,14 +80,15 @@
         margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
         width: 100%;
         height: 100vh;
-        align-items: center;
-        justify-content: center; 
+
     }
 
     main {
-        display: flex;   
-        align-items: center;
-        justify-content: center;   
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
     }
 
     img {
@@ -93,6 +96,9 @@
     }
 
     header {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         display:inline;
         // justify-content: space-between;
@@ -101,6 +107,10 @@
         padding-left: 1.5%;
         padding-right: 1.5%;
         padding-top: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
     }
 
     .container {
