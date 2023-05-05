@@ -19,6 +19,8 @@
                 <br>
                 <button type="submit"> Create User</button>
               </form>
+              <div class="g-recaptcha"
+       data-sitekey="6Lel4Z4UAAAAAOa8LO1Q9mqKRUiMYl_00o5mXJrR"></div>
 
             <router-link to="/">
               <button class="B1 button">Go Back Home</button>
@@ -27,10 +29,17 @@
             </div>
         </div>
     </div>
+    
   </body>
   <Footer/>
 </template>
 <script>
+const script = document.createElement('script');
+script.src = 'https://www.google.com/recaptcha/api.js';
+script.async = true;
+script.defer = true;
+document.body.appendChild(script);
+
 import { usersCollection } from '../firebase'
 import { addDoc } from 'firebase/firestore'
 import Footer from '@/components/Footer.vue';
