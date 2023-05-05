@@ -133,7 +133,7 @@
         height: 56px;
         padding: 16px;
         background-color: $Se2;
-        text-emphasis-color: $P1;
+        color: $P6;
         border: none;
     }
 </style>
