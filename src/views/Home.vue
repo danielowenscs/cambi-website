@@ -4,6 +4,7 @@
     <CardSection/>
     <PhoneSection/>
     <Footer/>
+    <JoinCambi/>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import CardSection from '@/components/CardSection.vue';
 import PhoneSection from '@/components/PhoneSection.vue';
 import Footer from '@/components/Footer.vue';
 import HeroNavContainer from '@/components/HeroNavContainer.vue';
+import JoinCambi from './JoinCambi.vue';
 export default {
     name: 'Home',
     components: {
@@ -23,7 +25,8 @@ export default {
     CardSection,
     PhoneSection,
     Footer,
-    HeroNavContainer
+    HeroNavContainer,
+    JoinCambi
 }
 }
 </script>
