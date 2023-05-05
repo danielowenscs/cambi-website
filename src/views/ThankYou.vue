@@ -1,0 +1,144 @@
+<template>
+    <body>
+        <header>
+            <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
+        </header>
+        <main>
+            <div class="container">
+            <h1 class="H2" >Thank you for your interest in Cambi</h1>
+            <div class="spacing-16px"></div>
+            <div class="spacing-16px"></div>
+            <h2 class="B1">Follow our Instagram or Discord!</h2>
+            <div class="spacing-16px"></div>
+            <div class="spacing-16px"></div>
+            <div class="spacing-16px"></div>
+            <div class="spacing-16px"></div>
+        </div>
+        </main>
+        <button class="B1 button" onclick="">Go Back Home</button>
+    </body>
+  </template>
+  <script>
+//   const script = document.createElement('script');
+//   script.src = 'https://www.google.com/recaptcha/api.js';
+//   script.async = true;
+//   script.defer = true;
+//   document.body.appendChild(script);
+  
+  import { usersCollection } from '../firebase'
+  import { addDoc } from 'firebase/firestore'
+  import Footer from '@/components/Footer.vue';
+  import Header from '@/components/Footer.vue';
+  
+  export default {
+      name: "JoinCambi",
+      data () {
+      return {
+          name: null,
+          email: null,
+      }
+     
+  },
+  methods: {
+    async createUser () {
+      console.log("creating user")
+      const addedDoc = await addDoc(usersCollection, this.$data);
+      console.log(addDoc, addedDoc);
+    },
+    goHome () {
+            this.$router.push('/')
+        }
+  }
+  }
+  </script>
+  
+  <style lang="scss" scoped>
+  @import '@/assets/styles/styles.scss';
+
+    html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: $N5;
+        margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    main {
+        display: flex;   
+        align-items: center;
+        justify-content: center;   
+    }
+
+    img {
+        margin: 1rem;
+    }
+
+    header {
+        width: 100%;
+        display:inline;
+        // justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        padding-top: 30px;
+    }
+
+    .container {
+        margin: auto;
+        width: 980px;
+        // height: 100%;
+    }
+    .spacing-16px{
+        height: 16px;
+    }
+    h1 {
+        margin: 0px;
+        text-align: center;
+    }
+    
+    h2 {
+        margin: 0px;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input {
+        background-color: $N6;
+        border: 1px solid $Se6;
+        padding: 16px 20px;
+        width: 338px;
+        border-radius: 4px;
+    }
+
+    input:focus{
+        outline: 1px solid $Se2;
+        background-color: $Se6
+    }
+
+    button {
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 18px;
+        border-radius: 40px;
+        width: 380px;
+        height: 56px;
+        padding: 16px;
+        background-color: $Se2;
+        text-emphasis-color: $P1;
+        border: none;
+    }
+</style>

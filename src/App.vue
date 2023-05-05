@@ -4,12 +4,14 @@
 </template>
 <script>
 import JoinCambi from './views/JoinCambi.vue';
+import ThankYou from './views/ThankYou.vue';
 import Home from './views/Home.vue'
 
 export default { 
   components: {
     Home,
     JoinCambi,
+    ThankYou,
 }
 }
 </script>
