@@ -3,13 +3,13 @@
   <RouterView></RouterView>
 </template>
 <script>
-import JoinForm from './components/JoinForm.vue';
+import JoinCambi from './views/JoinCambi.vue';
 import Home from './views/Home.vue'
 
 export default { 
   components: {
     Home,
-    JoinForm
+    JoinCambi,
 }
 }
 </script>

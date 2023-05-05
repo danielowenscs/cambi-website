@@ -15,12 +15,12 @@
 export default {
     name: 'Header', 
     methods: {
-    goToJoinForm() {
-      this.$router.push('/joinus')
-    },
-    goHome () {
-        this.$router.push('/')
-    }
+        goToJoinForm() {
+            this.$router.push('/joinus')
+        },
+        goHome () {
+            this.$router.push('/')
+        }
     }
 }
 </script>

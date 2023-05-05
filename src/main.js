@@ -2,11 +2,11 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import {createRouter, createWebHistory} from 'vue-router';
 import Home from './views/Home.vue';
-import JoinForm from './components/JoinForm.vue';
+import JoinCambi from './views/JoinCambi.vue';
 
 const routes = [
     { path: '/', component: Home },
-    { path: '/joinus', component: JoinForm }
+    { path: '/joinus', component: JoinCambi }
   ];
 
 const router = createRouter({

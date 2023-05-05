@@ -26,7 +26,6 @@ export default {
     PhoneSection,
     Footer,
     HeroNavContainer,
-    JoinCambi
 }
 }
 </script>

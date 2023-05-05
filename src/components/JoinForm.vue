@@ -9,13 +9,13 @@
     
               <form @submit.prevent="createUser">
                 <label>Name</label>
-                <input v-model="name" placeholder="Name" required/>
+                <input v-model="name" type="text" placeholder="Name" required/>
                 <br>
                 <label>Email</label>
-                <input v-model="email" type="email" placeholder="Email" required>
+                <input v-model="email" type="text" placeholder="Email" required>
                 <br>
                 <label>Phone Number(optional)</label>
-                <input v-model="phonenum" placeholder="Phone Number(optional)">
+                <input v-model="phonenum" type="text" placeholder="Phone Number(optional)">
                 <br>
                 <button type="submit"> Create User</button>
               </form>
@@ -101,9 +101,22 @@ h1 {
     text-align: center;
 }
 
+.g-recaptcha {
+  grid-column: 2/11;
+}
+
 form {
   grid-column: 5 / 12;
 }
+
+input[type="text"] {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  padding: 10px;
+}
+
 
 // @media (767px < width < 390px){
 
