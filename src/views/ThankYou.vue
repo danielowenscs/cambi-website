@@ -12,8 +12,8 @@
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
             <div>
-                <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y="><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
-                <a href="https://discord.gg/JazqGP4m"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
+                <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
+                <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
             </div>
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>

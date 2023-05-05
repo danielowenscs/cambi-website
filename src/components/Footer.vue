@@ -7,8 +7,8 @@
                     <img src="../assets/imgs/logo-cambi.png" alt="Website Logo" class="logo">
                     <h5 class="H4">{{ head }}</h5>
                     <p class="B3">{{ line }}<span class="color">{{ email }}</span></p>
-                    <img src="../assets/imgs/_Instagram.png" alt="Instagram" class="icon">
-                    <img src="../assets/imgs/_Discord.png" alt="Discord" class="icon">
+                    <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/_Instagram.png" alt="Instagram" class="icon"></a>
+                    <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/_Discord.png" alt="Discord" class="icon"></a>
                     </div>
                 </div>
             </div>
