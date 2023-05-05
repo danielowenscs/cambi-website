@@ -8,22 +8,23 @@
             <h1 class="H2" >Thank you for your interest in Cambi</h1>
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
-            <h2 class="B1">Follow our Instagram or Discord!</h2>
+            <h2 class="B1">Follow us on Instagram and join our Discord!</h2>
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
+            <div>
+                <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y="><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
+                <a href="https://discord.gg/JazqGP4m"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
+            </div>
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
+            <button class="B1 button" onclick="goHome()">Back to Cambi</button>
         </div>
+
         </main>
-        <button class="B1 button" onclick="">Go Back Home</button>
     </body>
   </template>
   <script>
-//   const script = document.createElement('script');
-//   script.src = 'https://www.google.com/recaptcha/api.js';
-//   script.async = true;
-//   script.defer = true;
-//   document.body.appendChild(script);
+
   
   import { usersCollection } from '../firebase'
   import { addDoc } from 'firebase/firestore'
@@ -31,7 +32,7 @@
   import Header from '@/components/Footer.vue';
   
   export default {
-      name: "JoinCambi",
+      name: "ThankYou",
       data () {
       return {
           name: null,
@@ -71,16 +72,20 @@
     }
 
     main {
-        display: flex;   
-        align-items: center;
-        justify-content: center;   
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    img {
+    header img {
         margin: 1rem;
     }
 
     header {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         display:inline;
         // justify-content: space-between;
@@ -89,12 +94,21 @@
         padding-left: 1.5%;
         padding-right: 1.5%;
         padding-top: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .icon {
+        height: 32px;
+        margin: 16px;
     }
 
     .container {
         margin: auto;
         width: 980px;
-        // height: 100%;
+        text-align: center;
     }
     .spacing-16px{
         height: 16px;
@@ -107,25 +121,6 @@
     h2 {
         margin: 0px;
         text-align: center;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    input {
-        background-color: $N6;
-        border: 1px solid $Se6;
-        padding: 16px 20px;
-        width: 338px;
-        border-radius: 4px;
-    }
-
-    input:focus{
-        outline: 1px solid $Se2;
-        background-color: $Se6
     }
 
     button {
