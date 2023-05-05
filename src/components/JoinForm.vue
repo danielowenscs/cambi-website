@@ -73,6 +73,8 @@ methods: {
 
 body {
   font-family: Inter;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {

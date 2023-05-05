@@ -32,5 +32,4 @@ export default {
 @import '@/assets/styles/styles.scss';
 
 
-
 </style>

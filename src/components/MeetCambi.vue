@@ -44,6 +44,7 @@ import { strings } from '@/assets/strings';
     gap: 40px;
     background-color: white;
     height: 190px;
+    text-align: center;
 }
 
 </style>
