@@ -124,7 +124,7 @@ export default {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px){
+@media (min-width: 280px) and (max-width: 767px){
     .container {
     margin: auto;
     }

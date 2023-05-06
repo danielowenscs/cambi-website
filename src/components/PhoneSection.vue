@@ -207,7 +207,7 @@ button:hover {
     }
 }
 
-@media (min-width: 320px) and (max-width: 767px){
+@media (min-width: 280px) and (max-width: 767px){
     // .background {
     //     height: 752px;
     // }

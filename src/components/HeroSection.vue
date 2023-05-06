@@ -68,7 +68,7 @@ button:hover {
         background-color: $Se3;
     }
 
-@media (min-width: 320px) and (max-width: 767px){
+@media (min-width: 280px) and (max-width: 767px){
     .container {
         // max-width: 1260px;
         margin: auto;
