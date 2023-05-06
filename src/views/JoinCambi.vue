@@ -13,16 +13,16 @@
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
-            <form >
+            <form @submit.prevent="createUser">
                 <div class="input-container">
-                    <input type="email" class="B3">
+                <input v-model="email" type="email" class="B3" placeholder="Email">
                 </div>
                 <div class="spacing-16px"></div>
                 <div class="spacing-16px"></div>
-                <input type="tel" class="B3">
+                <input v-model="phonenum" type="tel" class="B3" placeholder="Phone Number (Optional)">
                 <div class="spacing-16px"></div>
                 <div class="spacing-16px"></div>
-                <input type="text" class="B3">
+                <input v-model="name" type="text" class="B3" placeholder="Name">
                 <div class="spacing-16px"></div>
                 <div class="spacing-16px"></div>
                 <button type="submit"> Submit </button>
@@ -50,6 +50,7 @@
       return {
           name: null,
           email: null,
+          phonenum: null,
       }
      
   },
@@ -58,10 +59,12 @@
       console.log("creating user")
       const addedDoc = await addDoc(usersCollection, this.$data);
       console.log(addDoc, addedDoc);
+      this.$router.push('/thankyou')
     },
     goHome () {
             this.$router.push('/')
-        }
+        },
+    
   }
   }
   </script>
@@ -160,7 +163,7 @@
         height: 56px;
         padding: 16px;
         background-color: $Se2;
-        text-emphasis-color: $P1;
+        color: $N6;
         border: none;
     }
 

@@ -17,7 +17,7 @@
             </div>
             <div class="spacing-16px"></div>
             <div class="spacing-16px"></div>
-            <button class="B1 button" onclick="goHome()">Back to Cambi</button>
+            <button class="B1 button" @click="goHome()">Back to Cambi</button>
         </div>
 
         </main>
@@ -33,24 +33,13 @@
   
   export default {
       name: "ThankYou",
-      data () {
-      return {
-          name: null,
-          email: null,
-      }
-     
-  },
-  methods: {
-    async createUser () {
-      console.log("creating user")
-      const addedDoc = await addDoc(usersCollection, this.$data);
-      console.log(addDoc, addedDoc);
-    },
-    goHome () {
+      methods: {
+        goHome () {
             this.$router.push('/')
-        }
+        },
   }
-  }
+}
+  
   </script>
   
   <style lang="scss" scoped>
@@ -133,7 +122,12 @@
         height: 56px;
         padding: 16px;
         background-color: $Se2;
-        color: $P6;
+        color: $N6;
         border: none;
     }
+
+    button:hover {
+        background-color: $Se3;
+    }
+
 </style>

@@ -59,7 +59,7 @@ export default {
     height: 56px;
     padding: 16px;
     background-color: $Se2;
-    color: $Se6;
+    color: $N6;
     border: none;
 }
 
