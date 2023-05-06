@@ -4,7 +4,6 @@
     <CardSection/>
     <PhoneSection/>
     <Footer/>
-    <ThankYou/>
 </template>
 
 <script>
@@ -15,7 +14,7 @@ import CardSection from '@/components/CardSection.vue';
 import PhoneSection from '@/components/PhoneSection.vue';
 import Footer from '@/components/Footer.vue';
 import HeroNavContainer from '@/components/HeroNavContainer.vue';
-import ThankYou from './ThankYou.vue';
+
 export default {
     name: 'Home',
     components: {
@@ -26,7 +25,6 @@ export default {
     PhoneSection,
     Footer,
     HeroNavContainer,
-    ThankYou,
 }
 }
 </script>
