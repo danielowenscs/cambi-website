@@ -3,35 +3,37 @@
         <header>
             <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
         </header>
-        <main>
-            <div class="container">
-            <h1 class="H2" >Join the Cambi Community</h1>
-            <div class="spacing-16px"></div>
-            <div class="spacing-16px"></div>
-            <h2 class="B1">Sign up for exclusive updates and early access!</h2>
-            <div class="spacing-16px"></div>
-            <div class="spacing-16px"></div>
-            <div class="spacing-16px"></div>
-            <div class="spacing-16px"></div>
-            <form @submit.prevent="createUser">
-                <div class="input-container">
-                <input v-model="email" type="email" class="B3" placeholder="Email">
-                </div>
-                <div class="spacing-16px"></div>
-                <div class="spacing-16px"></div>
-                <input v-model="phonenum" type="tel" class="B3" placeholder="Phone Number (Optional)">
-                <div class="spacing-16px"></div>
-                <div class="spacing-16px"></div>
-                <input v-model="name" type="text" class="B3" placeholder="Name">
-                <div class="spacing-16px"></div>
-                <div class="spacing-16px"></div>
-                <button type="submit"> Submit </button>
-            </form>
+        <div class="container">
+            <div class="grid">
+                <main>
+                    <div class="content">
+                        <h1 class="H2" >Join the Cambi Community</h1>
+                            <div class="spacing-16px"></div>
+                            <div class="spacing-16px"></div>
+                        <h2 class="B1">Sign up for exclusive updates and early access!</h2>
+                            <div class="spacing-16px"></div>
+                            <div class="spacing-16px"></div>
+                            <div class="spacing-16px"></div>
+                            <div class="spacing-16px"></div>
+                        <form @submit.prevent="createUser">
+                            <input v-model="email" type="email" class="B3" placeholder="Email">
+                                <div class="spacing-16px"></div>
+                                <div class="spacing-16px"></div>
+                            <input v-model="phonenum" type="tel" class="B3" placeholder="Phone Number (Optional)">
+                                <div class="spacing-16px"></div>
+                                <div class="spacing-16px"></div>
+                            <input v-model="name" type="text" class="B3" placeholder="Name">
+                                <div class="spacing-16px"></div>
+                                <div class="spacing-16px"></div>
+                            <button type="submit"> Submit </button>
+                        </form>
+                    </div>
+                </main>
+            </div>
         </div>
-        </main>
-        <!-- <button class="B1 button" onclick="">Go Back Home</button> -->
     </body>
-  </template>
+</template>
+  
   <script>
 //   const script = document.createElement('script');
 //   script.src = 'https://www.google.com/recaptcha/api.js';
@@ -83,7 +85,6 @@
         margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
         width: 100%;
         height: 100vh;
-
     }
 
     main {
@@ -111,15 +112,13 @@
         padding-right: 1.5%;
         padding-top: 30px;
         position: fixed;
-        top: 0;
-        left: 0;
         
     }
 
-    .container {
+    .content {
         margin: auto;
         width: 980px;
-        // height: 100%;
+        //height: 100%;
     }
     .spacing-16px{
         height: 16px;
@@ -171,8 +170,63 @@
         background-color: $Se3;
     }
 
-    @media (max-width: 20rem) {
-        
+    @media only screen and (min-width: 280px) and (max-width: 797px) {
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            //
+        }
+        header {
+            display: none;
+        }
+        .container {
+            width: 90%;
+            height: 100%;
+            margin:auto;
+            align-items: center;
+        }
+        .grid {
+            height:100vh;
+            grid-gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+            padding: 0.5rem 0.5rem;
+            margin: 0; 
+        }
+        main {
+            margin: 0;
+            width: 90%;
+            justify-content: center;
+            
+        }
+        .content {
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        content form {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            margin: 0;
+        }
+
+        input {
+            padding: 1rem 1.10rem;
+            width: 90%;
+        }
+
+        button {
+            width: 100%;
+        }
+
     }
   
   </style>
