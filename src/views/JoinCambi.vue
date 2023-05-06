@@ -167,7 +167,9 @@
         border: none;
     }
 
-
+    button:hover {
+        background-color: $Se3;
+    }
   // @media (767px < width < 390px){
   
   // }

@@ -74,6 +74,10 @@ export default {
     padding-bottom: 32px;
 }
 
+button:hover {
+        background-color: $Se3;
+    }
+
 @media (min-width: 1261px){
 
     .container {
