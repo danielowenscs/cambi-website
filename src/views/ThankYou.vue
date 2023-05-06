@@ -3,24 +3,27 @@
         <header>
             <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
         </header>
-        <main>
-            <div class="container">
-            <h1 class="H2" >Thank you for your interest in Cambi</h1>
-            <div class="spacing-16px"></div>
-            <div class="spacing-16px"></div>
-            <h2 class="B1">Follow us on Instagram and join our Discord!</h2>
-            <div class="spacing-16px"></div>
-            <div class="spacing-16px"></div>
-            <div>
-                <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
-                <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
+        <div class="container">
+            <div class="grid">
+                <main>
+                    <div class="content">
+                        <h1 class="H2" >Thank you for your interest in Cambi</h1>
+                        <div class="spacing-16px"></div>
+                        <div class="spacing-16px"></div>
+                        <h2 class="B1">Follow us on Instagram and join our Discord!</h2>
+                        <div class="spacing-16px"></div>
+                        <div class="spacing-16px"></div>
+                        <div>
+                            <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
+                            <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
+                        </div>
+                        <div class="spacing-16px"></div>
+                        <div class="spacing-16px"></div>
+                        <button class="B1 button" @click="goHome()">Back to Cambi</button>
+                    </div>
+                </main>
             </div>
-            <div class="spacing-16px"></div>
-            <div class="spacing-16px"></div>
-            <button class="B1 button" @click="goHome()">Back to Cambi</button>
         </div>
-
-        </main>
     </body>
   </template>
   <script>
@@ -56,12 +59,12 @@
         margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
         width: 100%;
         height: 100vh;
-        align-items: center;
-        justify-content: center; 
+        // align-items: center;
+        // justify-content: center; 
     }
 
     main {
-        position: relative;
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -94,7 +97,7 @@
         margin: 16px;
     }
 
-    .container {
+    .content {
         margin: auto;
         width: 980px;
         text-align: center;
@@ -130,4 +133,43 @@
         background-color: $Se3;
     }
 
+    @media only screen and (min-width: 280px) and (max-width: 797px) {
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: none;
+        }
+        .container {
+            width: 90%;
+            height: 100%;
+            margin:auto;
+            align-items: center;
+        }
+        .grid {
+            height:100vh;
+            grid-gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+            padding: 0.5rem 0.5rem;
+            margin: 0; 
+        }
+        main {
+            margin: 0;
+            width: 90%;
+            justify-content: center;
+        }
+        .content {
+            width: 90%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+        }
+    }
 </style>
