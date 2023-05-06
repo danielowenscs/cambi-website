@@ -122,7 +122,7 @@ scrolly {
 }
 
 //I believe this should work correctly - containers start hanging off the "page" at 1285px
-@media (width > 1260px) {
+@media (max-height: 1024px) {
     .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

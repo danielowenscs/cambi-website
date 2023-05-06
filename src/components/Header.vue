@@ -38,16 +38,16 @@ body {
     min-height: fit-content;
 }
 
-header button {
-    border-radius: 40px;
-    width: 209px;
-    height: 56px;
-    padding: 16px;
-    background-color: $Se2;
-    border-color: none;
-    text-emphasis: $P1;
-    visibility: hidden;
-}
+// header button {
+//     border-radius: 40px;
+//     width: 209px;
+//     height: 56px;
+//     padding: 16px;
+//     background-color: $Se2;
+//     border-color: none;
+//     text-emphasis: $P1;
+//     visibility: hidden;
+// }
 
 header {
     // position: fixed;
@@ -68,6 +68,7 @@ header .logo {
     position: relative;
     width: 102px; 
     height: 20px;
+    margin: 1rem;
 }
 
 
