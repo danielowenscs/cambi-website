@@ -87,11 +87,10 @@ scrolly {
     height: 544px;
     border-radius: 16px;
     justify-content: inherit;
-    
 }
 
 // ITWORKS
-@media (width < 1024px){
+@media (width < 1023px){
     .grid {
         grid-column: center-start;
         display: grid;
@@ -104,26 +103,27 @@ scrolly {
         padding-right: var(--page-margin);
         background-color: white;
         justify-content: flex-start;
+        overflow-x: scroll;
     }  
     .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    padding: 64px 32px;
-    gap: 32px;
-    background-color: $Se6;
-    width: 272px;
-    height: 372px;
-    border-radius: 16px;
-    justify-content: flex-start;
-    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 64px 32px;
+        gap: 32px;
+        background-color: $Se6;
+        width: 272px;
+        height: 372px;
+        border-radius: 16px;
+        justify-content: flex-start;
     }
 }
 
 //I believe this should work correctly - containers start hanging off the "page" at 1285px
-@media (max-height: 1024px) {
+@media (min-width: 1024px) {
     .grid {
+        height:auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 16 px;
