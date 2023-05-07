@@ -9,6 +9,7 @@
                     <p class="B3">{{ line }}<span class="color">{{ email }}</span></p>
                     <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/_Instagram.png" alt="Instagram" class="icon"></a>
                     <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/_Discord.png" alt="Discord" class="icon"></a>
+                    <div @click="goToPrivacy" class=" B3 privacy"> Privacy Policy</div>
                     </div>
                 </div>
             </div>
@@ -27,6 +28,11 @@ export default {
             line: strings.line,
             email: strings.email,
         }
+    },
+    methods: {
+        goToPrivacy () {
+            this.$router.push('/privacypolicy');
+        }
     }
 }
 </script>
@@ -41,6 +47,12 @@ export default {
     width: 102px; 
     height: 20px;
 }
+.privacy{
+    color: white !important;
+    text-decoration: none;
+    margin-top: 16px;
+}
+
 .icon {
     width: 32px; 
     height: 32px;

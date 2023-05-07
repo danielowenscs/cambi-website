@@ -11,21 +11,21 @@
                             <div class="spacing-16px"></div>
                             <div class="spacing-16px"></div>
                         <h2 class="B1">Sign up for exclusive updates and early access!</h2>
+                            <div class="B1"></div>
                             <div class="spacing-16px"></div>
                             <div class="spacing-16px"></div>
                             <div class="spacing-16px"></div>
                             <div class="spacing-16px"></div>
+                           <div v-if="message">
+                            <div class="B1 error">{{ message }}</div>
+                            <div class="spacing-16px"></div>
+                            <div class="spacing-16px"></div>
+                           </div>
                         <form @submit.prevent="createUser">
                             <input v-model="email" type="email" class="B3" placeholder="Email">
                                 <div class="spacing-16px"></div>
                                 <div class="spacing-16px"></div>
-                            <input v-model="phonenum" type="tel" class="B3" placeholder="Phone Number (Optional)">
-                                <div class="spacing-16px"></div>
-                                <div class="spacing-16px"></div>
-                            <input v-model="name" type="text" class="B3" placeholder="Name">
-                                <div class="spacing-16px"></div>
-                                <div class="spacing-16px"></div>
-                            <button type="submit"> Submit </button>
+                            <button type="submit"> Join Cambi </button>
                         </form>
                     </div>
                 </main>
@@ -43,25 +43,29 @@
   
   import { usersCollection } from '../firebase'
   import { addDoc } from 'firebase/firestore'
-  import Footer from '@/components/Footer.vue';
-  import Header from '@/components/Footer.vue';
+
   
   export default {
       name: "JoinCambi",
       data () {
       return {
-          name: null,
-          email: null,
-          phonenum: null,
+          email: '',
+          message: '',
       }
      
   },
   methods: {
     async createUser () {
-      console.log("creating user")
-      const addedDoc = await addDoc(usersCollection, this.$data);
-      console.log(addDoc, addedDoc);
-      this.$router.push('/thankyou')
+    try { 
+        const data = { email: this.$data.email, joinDate: new Date().toLocaleDateString() };
+        console.log(data)
+        //const addedDoc = await addDoc(usersCollection, null);
+        const addedDoc = await addDoc(usersCollection, data);
+        console.log(addDoc, addedDoc);
+        this.$router.push('/thankyou')
+        } catch (error) {
+            this.message = 'an error occured';
+        }
     },
     goHome () {
             this.$router.push('/')
@@ -93,6 +97,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
+    }
+    .error {
+        text-align: center;
+        color: $D3;
     }
 
     img {
@@ -157,7 +165,7 @@
         font-weight: 400;
         line-height: 24px;
         font-size: 18px;
-        border-radius: 40px;
+        border-radius: 8px;
         width: 380px;
         height: 56px;
         padding: 16px;

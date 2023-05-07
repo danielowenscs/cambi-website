@@ -15,7 +15,7 @@
                 <input v-model="email" type="text" placeholder="Email" required>
                 <br>
                 <label>Phone Number(optional)</label>
-                <input v-model="phonenum" type="text" placeholder="Phone Number(optional)">
+                <input v-model="phone" type="text" placeholder="Phone Number(optional)">
                 <br>
                 <button type="submit"> Create User</button>
               </form>
