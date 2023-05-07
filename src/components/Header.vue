@@ -1,19 +1,20 @@
 <template>
     <body>
         <header ref="header">
-            <div class="container">
-            <img src="../assets/imgs/logo-cambi.png" @click="refresh()" alt="Website Logo">
-            <!-- <button @click="goToJoinForm()" class="B1">Join Cambi</button> -->
-            </div>
+            <CambiLogo/>
         </header>
         <section class="banner"></section>
     </body>
 </template>
 
 <script>
+import CambiLogo from './icons/CambiLogo.vue';
 
 export default {
     name: 'Header', 
+    components : {
+        CambiLogo,
+    },
     methods: {
         goToJoinForm() {
             this.$router.push('/joinus')
@@ -64,7 +65,7 @@ header {
     // z-index: 999;
 }
 
-header .logo {
+header .container {
     position: relative;
     width: 102px; 
     height: 20px;

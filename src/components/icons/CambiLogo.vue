@@ -5,8 +5,8 @@
 
     <svg
     width="210mm"
-    height="297mm"
-    viewBox="0 0 210 297"
+    height="240mm"
+    viewBox="0 0 210 240"
     version="1.1"
     id="svg1128"
     inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
@@ -167,10 +167,14 @@ export default {
 
 body {
   justify-content: center;
-  height: min-content;
+  min-height: fit-content;
 }
 
 svg {
-  transform: rotate(-90deg) translateY(50%) ;
+  transform: rotate(-90deg) scale(0.7);
+  width: 12rem;
+  height: 10rem;
+  margin: 0 0;
+  padding: 0 0;
 }
 </style>
