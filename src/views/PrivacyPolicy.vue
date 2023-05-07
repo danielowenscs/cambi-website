@@ -1,5 +1,5 @@
 <template>
-    <Header/>
+    <!-- <Header/> -->
 <div class="content" B3>
     Privacy Policy
 
@@ -55,9 +55,11 @@ import Header from '@/components/Header.vue';
 <style lang="scss" scoped>
 @import '@/assets/styles/styles.scss';
  .content {
-        background-color: $N5;
         margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
-        width: 100%;
-        height: 100vh;
+        padding: 10%;
+
+    }
+    body {
+        background-color: $N5;
     }
 </style>
