@@ -183,9 +183,9 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            display: none;
-        }
+        // header {
+        //     display: none;
+        // }
         .container {
             width: 90%;
             height: 100%;
