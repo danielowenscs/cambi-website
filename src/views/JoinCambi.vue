@@ -1,8 +1,8 @@
 <template>
     <body>
-        <header>
+        <!-- <header>
             <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
-        </header>
+        </header> -->
         <div class="container">
             <div class="grid">
                 <main>
