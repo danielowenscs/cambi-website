@@ -1,8 +1,7 @@
 <template>
     <!-- <Header/> -->
-<div class="content" B3>
-    Privacy Policy
-
+<div class="content">
+    <pre class="B3">
 Cambi ("Cambi", "we", "us", "our") is committed to protecting the privacy and security of our users. This Privacy Policy explains how we collect, use, and disclose information that we collect from you when you use our website, mobile application, and related services (together, the "Service").
 
 Information We Collect
@@ -41,6 +40,7 @@ We may update this Privacy Policy from time to time. If we make material changes
 Contact Us
 
 If you have any questions or concerns about our Privacy Policy, please contact us.
+    </pre>
 </div>
 </template>
 <script>
@@ -49,7 +49,10 @@ import Header from '@/components/Header.vue';
         name: "PrivacyPolicy",
         components: {
         Header,
-        }
+        },
+        mounted() {
+        window.scrollTo(0, 0);
+        }   
     }
 </script>
 <style lang="scss" scoped>
@@ -57,9 +60,18 @@ import Header from '@/components/Header.vue';
  .content {
         margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
         padding: 10%;
+        scroll-margin-top: 0px;
 
     }
     body {
         background-color: $N5;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    pre {
+        white-space: pre-wrap; /* This will wrap long lines of text */
+        max-width: 100%; /* This will limit the width of the container */
+        margin: 0 auto;
     }
 </style>
