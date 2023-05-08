@@ -1,8 +1,9 @@
 <template>
     <!-- <Header/> -->
 <div class="content">
+    <h1 class="H3"> Privacy Policy</h1>
     <pre class="B3">
-Cambi ("Cambi", "we", "us", "our") is committed to protecting the privacy and security of our users. This Privacy Policy explains how we collect, use, and disclose information that we collect from you when you use our website, mobile application, and related services (together, the "Service").
+Cambi is committed to protecting the privacy and security of our users. This Privacy Policy explains how we collect, use, and disclose information that we collect from you when you use our website, mobile application, and related services (together, the "Service").
 
 Information We Collect
 
