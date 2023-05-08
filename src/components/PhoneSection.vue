@@ -1,34 +1,22 @@
 <template>
-<div class="background">
-    <div class="container">
-        <div class="grid">
-                 <div class="text">
-                    <div class="H2"><span class="color">{{ ready }}</span>{{ phone1 }}</div>
-                    <div class="B1">{{ phone2 }}</div>    
-                </div>
-                <div class="telly">
-                <img src="@/assets/imgs/phone.png" >
-                </div> 
-                <div class="b-cont">
-                    <button @click="goToJoinForm()" class="button">Join Cambi</button>
-                </div>
-                
+    <div class="grid background-shade"> 
+            <div class="content">
+            <h1 class="headline">Ready To Start?</h1>
+            <p class="body">Sign up for Cambi and see how easy it is to align your purchases with your values.</p>
+        </div>
+        <div class="image-container">
+            <img src="@/assets/imgs/phone.png">
+        </div>
+        <div class="button-container">
+            <button @click="goToJoinForm">Join Cambi</button>
         </div>
     </div>
-</div>
 </template>
 <script>
-import { strings } from '@/assets/strings.js';
+
 
 export default {
    name: 'PhoneSection',
-   data () {
-       return {
-            ready: strings.ready,
-            phone1: strings.phone1,
-            phone2: strings.phone2,
-       }
-   },
    methods: {
     goToJoinForm() {
       this.$router.push('/joinus')
@@ -39,221 +27,167 @@ export default {
 </script>
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
-
-
-.background {
-    background: $Se6;
-    height: auto;
+button {
+  border-radius: 40px;
+  width: 209px;
+  padding: 16px;
+  background-color: $Se2;
+  border: none;
+  color: $N6;
 }
-.color {
-        color: $Se2;
+.secondary-2 {
+    color: $Se2;
 }
-
-.button {
-    font-family: 'Inter';
-    font-weight: 400;
-    line-height: 24px;
-    font-size: 18px;
-    border-radius: 40px;
-    width: 209px;
-    height: 56px;
-    padding: 16px;
-    background-color: $Se2;
-    color: $N6;
-    border: none;
+.background-shade {
+    background-color: #F8FAFF;
 }
 
-.H2 { 
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: inline;
-}
-
-.B1 { 
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-button:hover {
-        background-color: $Se3;
+@media (max-width: 767px) {
+    .content {
+        padding: 64px 24px 64px 24px;
     }
-
-@media (min-width: 1261px){
-
-    .container {
-        max-width: 1260px;
-        margin: auto;
-        align-items: center;
-    }   
-    .grid {
-        padding: 120px 40px;
-        margin: auto;
-        height: 400px;
-        gap: 1rem;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        background: $Se6;
+    .headline {
+        //spacing
+        margin: 0 0 16px 0;
+        // text styles
+        font-family: 'Inter';
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 20px;
     }
-
-    .text, .telly { 
-        display: inline-box;
+    .body {
+        margin:0;
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 16px;
     }
-
-    .text {
-        grid-column: 2 / 6;
-        grid-row: 1;
-        margin: auto;
-        margin-bottom: 0;
-    }
-
-    .telly {
-        position: relative;
-        grid-column: 10 / 12;
-        grid-row: 1 / 3;
-    }
-
-    .b-cont {
-        grid-column: 2 / 6;
-        grid-row: 2;
-    }
-    img {
-        margin: auto;
-        max-width: 100%;
-        max-height: auto;
-    }
-
-}
-
-@media (min-width: 1024px) and (max-width: 1260px){
-    .container {
-        margin: auto;
-    }
-    .grid {
-        padding: 100px 0;
-        margin: auto;
-        gap: 1rem;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-    }
-    // .grid {
-    // padding: 120px 40px;
-    // margin: auto;
-    // height: 400px;
-    // gap: 1rem;
-    // display: grid;
-    // grid-template-columns: repeat(12, 1fr);
-    // }
-
-    .text {
-        grid-column: 2 / 6;
-        grid-row: 1;
-        margin: auto;
-        margin-bottom: 0;
-    }
-
-    .telly {
-        grid-column: 10 / 12;
-        grid-row: 1 / 3;
-    }
-    .b-cont {
-        grid-column: 2 / 6;
-        grid-row: 2;
-    }
-
-    img {
-        margin: auto;
-        max-width: 100%;
-        max-height: auto;
-    }
-
-}
-
-@media (min-width: 768px) and (max-width: 1023px){
-    // .background {
-    //     height: 608px;
-    // }
-    .container {
-        margin: auto;
-    }
-    .grid {
-        padding: 100px 10px;
-        margin: auto;
-        gap: 1rem;
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    .text {
-        grid-column: 1 / 4;
-        grid-row: 1;
-        margin: auto;
-        margin-bottom: 0;
-    }
-
-    .telly {
-        grid-column: 7 / 9;
-        grid-row: 1 / 3;
-    }
-
-    .b-cont {
-        grid-column: 1 / 6;
-        grid-row: 2;
-    }
-
-    img {
-        margin: auto;
-        max-width: 100%;
-        max-height: auto;
-    }
-}
-
-@media (min-width: 280px) and (max-width: 767px){
-    // .background {
-    //     height: 752px;
-    // }
-
-    container {
-        margin: auto;
-    }
-    .grid {
-        padding: 100px 0;
-        margin: auto;
-        gap: 1rem;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .text {
-        grid-column-start: 1;
-        grid-row: 1;
+    .image-container {
         text-align: center;
     }
-
-    .telly {
-        // padding-left: 100px;
-        // padding-right: 100px;
-        grid-column: 1;
-        grid-row: 2;
-        justify-self: center;
-    }
-
-    .b-cont {
-        grid-column: 1;
-        grid-row: 3;
-        justify-self: center;
-    }
-
     img {
-        margin: auto;
-        width: 8.5rem;
-        max-height: 18rem;
+        height: 288px;
+        width: 136px;
     }
-    .B1 { 
-    padding-top: 32px;
-    padding-bottom: 32px;
-    max-width: 500px;
-    margin:auto;
+    .button-container {
+        text-align: center;
+        padding: 32px 0 64px 0;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding: 120px 40px;
+        column-gap: 24px;
+    }
+    .content {
+        grid-column: 1/9;
+    }
+    .headline {
+        //spacing
+        margin:0 0 16px 0;
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 700;
+        line-height: 36px;
+        font-size: 48px;
+    }
+    
+    .body {
+        //spacing
+        grid-column: 9/12;
+        margin: 0;
+        grid-row: 1;
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 18px;
+
+    }
+    .image-container {
+        grid-column-end: -1;
+        grid-row: 1 / span 2;
+    }
+    img {
+        height: 448px;
+        width: 210px;
+    }
+    .button-container {
+        margin: 16px 0 0 0;
+        grid-row: 2 /span 3;
+        grid-column: 1/9;
+        height: 100%
+    }
+    
+}
+@media (min-width: 1201px){
+    // .content {
+    //     display: grid;
+    //     grid-template-columns: repeat(12, 78px);
+    //     padding: 120px 40px;
+    //     column-gap: 24px;
+    //     justify-content: center;
+        
+    // }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 78px);
+        padding: 120px 40px;
+        column-gap: 24px;
+        justify-content: center;
+    }
+    .content {
+        grid-column: 1/9;
+        align-self: start;
+    }
+    .headline {
+        //spacing
+        margin:0 0 16px 0;
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 700;
+        line-height: 36px;
+        font-size: 48px;
+    }
+    
+    .body {
+        //spacing
+        grid-column: 9/12;
+        margin: 0;
+        grid-row: 1;
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 18px;
+        height: min-content;
+
+    }
+    .image-container {
+        grid-column: 10/-1;
+        grid-row: 1 / span 2;
+    }
+    img {
+        height: 448px;
+        max-width: 100%;
+    }
+    
+    .button-container {
+        margin: 16px 0 0 0;
+        grid-row: 2 /span 3;
+        grid-column: 1/9;
+        height: 100%
+    }
+    
+}
+
 
 </style>

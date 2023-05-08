@@ -1,37 +1,33 @@
 <template>
-    <body>
-        <!-- <header>
-            <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
-        </header> -->
-        <div class="container">
-            <div class="grid">
-                <main>
-                    <div class="content">
-                        <h1 class="H2" >Join the Cambi Community</h1>
-                            <div class="spacing-16px"></div>
-                            <div class="spacing-16px"></div>
-                        <h2 class="B1">Sign up for exclusive updates and early access!</h2>
-                            <div class="B1"></div>
-                            <div class="spacing-16px"></div>
-                            <div class="spacing-16px"></div>
-                            <div class="spacing-16px"></div>
-                            <div class="spacing-16px"></div>
-                           <div v-if="message">
-                            <div class="B1 error">{{ message }}</div>
-                            <div class="spacing-16px"></div>
-                            <div class="spacing-16px"></div>
-                           </div>
-                        <form @submit.prevent="createUser">
-                            <input v-model="email" type="email" class="B3" placeholder="Email">
-                                <div class="spacing-16px"></div>
-                                <div class="spacing-16px"></div>
-                            <button type="submit"> Join Cambi </button>
-                        </form>
+<NavBar/>
+<div class="container">
+    <div class="grid">
+        <main>
+            <div class="content">
+                <h1 class="H2" >Join the Cambi Community</h1>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
+                <h2 class="B1">Sign up for exclusive updates and early access!</h2>
+                    <div class="B1"></div>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
+                    <div v-if="message">
+                    <div class="B1 error">{{ message }}</div>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
                     </div>
-                </main>
+                <form @submit.prevent="createUser">
+                    <input v-model="email" type="email" class="B3" placeholder="Email">
+                        <div class="spacing-16px"></div>
+                        <div class="spacing-16px"></div>
+                    <button type="submit"> Join Cambi </button>
+                </form>
             </div>
-        </div>
-    </body>
+        </main>
+    </div>
+</div>
 </template>
   
   <script>
@@ -43,36 +39,37 @@
   
   import { usersCollection } from '../firebase'
   import { addDoc } from 'firebase/firestore'
+import NavBar from '@/components/NavBar.vue';
 
   
   export default {
-      name: "JoinCambi",
-      data () {
-      return {
-          email: '',
-          message: '',
-      }
-     
-  },
-  methods: {
-    async createUser () {
-    try { 
-        const data = { email: this.$data.email, joinDate: new Date().toLocaleDateString() };
-        console.log(data)
-        //const addedDoc = await addDoc(usersCollection, null);
-        const addedDoc = await addDoc(usersCollection, data);
-        console.log(addDoc, addedDoc);
-        this.$router.push('/thankyou')
-        } catch (error) {
-            this.message = 'an error occured';
-        }
+    name: "JoinCambi",
+    data() {
+        return {
+            email: "",
+            message: "",
+        };
     },
-    goHome () {
-            this.$router.push('/')
+    methods: {
+        async createUser() {
+            try {
+                const data = { email: this.$data.email, joinDate: new Date().toLocaleDateString() };
+                console.log(data);
+                //const addedDoc = await addDoc(usersCollection, null);
+                const addedDoc = await addDoc(usersCollection, data);
+                console.log(addDoc, addedDoc);
+                this.$router.push("/thankyou");
+            }
+            catch (error) {
+                this.message = "an error occured";
+            }
         },
-    
-  }
-  }
+        goHome() {
+            this.$router.push("/");
+        },
+    },
+    components: { NavBar }
+}
   </script>
   
   <style lang="scss" scoped>

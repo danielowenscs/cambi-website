@@ -1,30 +1,26 @@
 <template>
-    <body>
-        <!-- <header>
-            <img src="../assets/imgs/logo-cambi-p.png" @click="goHome()" alt="Website Logo">
-        </header> -->
-        <div class="container">
-            <div class="grid">
-                <main>
-                    <div class="content">
-                        <h1 class="H2" >Thank you for your interest in Cambi</h1>
-                        <div class="spacing-16px"></div>
-                        <div class="spacing-16px"></div>
-                        <h2 class="B1">Follow us on Instagram and join our Discord!</h2>
-                        <div class="spacing-16px"></div>
-                        <div class="spacing-16px"></div>
-                        <div>
-                            <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
-                            <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
-                        </div>
-                        <div class="spacing-16px"></div>
-                        <div class="spacing-16px"></div>
-                        <button class="B1 button" @click="goHome()">Back to Cambi</button>
+    <NavBar/>
+    <div class="container">
+        <div class="grid">
+            <main>
+                <div class="content">
+                    <h1 class="H2" >Thank you for your interest in Cambi</h1>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
+                    <h2 class="B1">Follow us on Instagram and join our Discord!</h2>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
+                    <div>
+                        <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
+                        <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
                     </div>
-                </main>
-            </div>
+                    <div class="spacing-16px"></div>
+                    <div class="spacing-16px"></div>
+                    <button class="B1 button" @click="goHome()">Back to Cambi</button>
+                </div>
+            </main>
         </div>
-    </body>
+    </div>
   </template>
   <script>
 
@@ -32,15 +28,17 @@
   import { usersCollection } from '../firebase'
   import { addDoc } from 'firebase/firestore'
   import Footer from '@/components/Footer.vue';
-  import Header from '@/components/Footer.vue';
+import NavBar from '@/components/NavBar.vue';
+
   
   export default {
-      name: "ThankYou",
-      methods: {
-        goHome () {
-            this.$router.push('/')
+    name: "ThankYou",
+    methods: {
+        goHome() {
+            this.$router.push("/");
         },
-  }
+    },
+    components: { NavBar }
 }
   
   </script>

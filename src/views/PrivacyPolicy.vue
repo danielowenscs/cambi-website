@@ -1,5 +1,5 @@
 <template>
-    <!-- <Header/> -->
+    <NavBar/>
 <div class="content">
     <h1 class="H3"> Privacy Policy</h1>
     <pre class="B3">
@@ -45,11 +45,9 @@ If you have any questions or concerns about our Privacy Policy, please contact u
 </div>
 </template>
 <script>
-import Header from '@/components/Header.vue';
     export default {
         name: "PrivacyPolicy",
         components: {
-        Header,
         },
         mounted() {
         window.scrollTo(0, 0);
