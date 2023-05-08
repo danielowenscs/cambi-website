@@ -6,7 +6,7 @@
         </p>
 
     </div>
-    <div class="content">
+    <div class="content background-shade">
         <h1 class="headline">Fitted To Your Needs</h1>
         <p class="body">
         Select your <span class="secondary-2">PREFERENCES</span> from a range of pre-made goals related to health, diet, lifestyle, and more. Cambi is designed to learn what makes you unique and help you shop to meet your needs. With Cambi, you can finally enjoy a stress-free shopping experience that aligns with your values and preferences.
@@ -15,7 +15,7 @@
     <div class="content">
         <h1 class="headline">Simplify Your Decisions </h1>
         <p class="body">
-        Looking for a quick and easy way to determine which products are right for you? Look no further than our <span class="secondary-2">CAMBISCORE</span> system! Our innovative algorithm rates products based on your unique preferences, so you can easily identify the items that are most aligned with your values. Say goodbye to tedious research and hello to effortless personlized shopping with Cambi.
+        Looking for a quick and easy way to determine which products are right for you? Look no further than our <span class="secondary-2">CAMBISCORE</span> system! Our innovative algorithm rates products based on your unique preferences, so you can easily identify the items that are most aligned with you. Say goodbye to tedious research and hello to effortless personlized shopping with Cambi.
         </p>
     </div>
 </template>
@@ -34,10 +34,13 @@ export default {
 .secondary-2 {
     color: $Se2;
 }
+.background-shade {
+    background-color: #F8FAFF;
+}
 
 @media (max-width: 767px) {
     .content {
-    padding: 32px 24px 0 24px;
+    padding: 64px 24px 64px 24px;
     }
     .headline {
         //spacing
@@ -45,11 +48,11 @@ export default {
         // text styles
         font-family: 'Inter';
         font-weight: 600;
-        line-height: 20px;
-        font-size: 24px;
+        line-height: 24px;
+        font-size: 20px;
     }
     .body {
-        margin: 0 0 64px;
+        margin:0;
         // text styles
         font-family: 'Inter';
         font-weight: 400;
@@ -61,7 +64,8 @@ export default {
     .content {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        margin: 120px 40px;
+        padding: 120px 40px;
+        column-gap: 24px;
     }
     .headline {
         //spacing
@@ -77,7 +81,7 @@ export default {
     .body {
         //spacing
         grid-column: 1/9;
-        margin: 0 0 120px 0;
+        margin: 0;
 
         // text styles
         font-family: 'Inter';
@@ -91,9 +95,11 @@ export default {
 @media (min-width: 1201px){
     .content {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        margin: 120px;
-        max-width: 1200px;
+        grid-template-columns: repeat(12, 78px);
+        padding: 120px 40px;
+        column-gap: 24px;
+        justify-content: center;
+        
     }
     .headline {
         //spacing
@@ -109,7 +115,7 @@ export default {
     .body {
         //spacing
         grid-column: 1/9;
-        margin: 0 0 120px 0;
+        margin: 0;
 
         // text styles
         font-family: 'Inter';
@@ -117,8 +123,7 @@ export default {
         line-height: 24px;
         font-size: 18px;
 
-    }
-    
+    } 
 }
 
 

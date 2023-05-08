@@ -1,50 +1,106 @@
 <template>
-    <div class="container-1">
-        <div class="container-2">
-            <div class="H2">
-               {{ meet1 }}
-            </div>
-            <div class=" B2">
-               {{ meet2 }}
-            </div>
-
-        </div>
-    </div>
+   <div class="content background-shade">
+        <h1 class="headline">Meet <span class="secondary-2">Cambi</span></h1>
+        <p class="body">The App that embodies your shopping values and transforms your shopping habits.</p>
+   </div>
 </template>
 <script>
 import { strings } from '@/assets/strings';
     export default {
-        name: 'MeetCambi',
-        data () {
-            return {
-                meet1: strings.meet1,
-                meet2: strings.meet2,
-            }
-        }
+        name: 'MeetCambi'
     }
 </script>
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
-.container-1 {
-    //height: 192px;
-    background-color: white;
-    padding-top: 120px;
-    //position: absolute;
-    //top: 664px;
-    left: 0px;
-    right: 0px;
-    padding: 120px 0px;
+.secondary-2 {
+    color: $Se2;
 }
-.container-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0px;
-    gap: 40px;
-    background-color: white;
-    height: 190px;
-    text-align: center;
+.background-shade {
+    background-color: #F8FAFF;
+}
+@media (max-width: 767px) {
+    .content {
+    padding: 64px 24px 64px 24px;
+    }
+    .headline {
+        //spacing
+        margin: 0 0 16px 0;
+        // text styles
+        font-family: 'Inter';
+        font-weight: 600;
+        line-height: 32px;
+        font-size: 28px;
+        text-align: center;
+    }
+    .body {
+        margin: 0;
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .content {
+        padding: 120px 40px;
+    }
+    .headline {
+        //spacing
+        margin:0 0 16px 0;
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 700;
+        line-height: 36px;
+        font-size: 48px;
+        text-align: center;
+    }
+    .body {
+        //spacing
+        margin: 0;
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+}
+@media (min-width: 1201px){
+    .content {
+        display: grid;
+        grid-template-columns: repeat(1200px);
+        padding: 120px 40px;
+    }
+    .headline {
+        //spacing
+        margin:0 0 16px 0;
+
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 700;
+        line-height: 36px;
+        font-size: 48px;
+        text-align: center;
+    }
+    .body {
+        //spacing
+        margin: 0;
+
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 18px;
+        text-align: center;
+
+    } 
 }
 
 </style>
