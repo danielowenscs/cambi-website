@@ -1,7 +1,7 @@
 <template>
    <div class="content background-shade">
         <h1 class="headline">Meet <span class="secondary-2">Cambi</span></h1>
-        <p class="body">The App that embodies your shopping values and transforms your shopping habits.</p>
+        <h2 class="body">The App that embodies your shopping values and transforms your shopping habits.</h2>
    </div>
 </template>
 <script>
