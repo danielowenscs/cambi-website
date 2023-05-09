@@ -1,6 +1,8 @@
 <template>
    <div class="container">
-        <div class="nav"></div>
+        <div class="nav">
+            <CambiLogo/>
+        </div>
         <div class="content">
             <h1 class="headline">Shop Mindfully</h1>
             <h2 class="body">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</h2>
@@ -11,16 +13,16 @@
 </template>
 <script>
 import strings from '@/assets/strings'
+import CambiLogo from './icons/CambiLogo.vue';
 
 export default {
-    name: 'HeroSection',
+    name: "HeroSection",
     methods: {
-    goToJoinForm() {
-      this.$router.push('/joinus')
-    }
-  }
-    
-   
+        goToJoinForm() {
+            this.$router.push("/joinus");
+        }
+    },
+    components: { CambiLogo }
 }
 </script>
 <style lang = 'scss' scoped>
@@ -43,9 +45,7 @@ export default {
 button:hover {
     background-color: $Se3;
 }
-.nav {
-    height: 64px;
-}
+
 .container {
     height: calc(100vh - 64px);
     background: linear-gradient(-45deg, #312D9F, #4858D7);
@@ -53,6 +53,7 @@ button:hover {
 .content {
     height: calc(100% - 64px);
 }
+
 
 
 @media (max-width: 767px) {
@@ -65,6 +66,9 @@ button:hover {
         padding: 0 40px;
         overflow-y: auto;
         text-align: center;
+    }
+    .nav {
+        padding: 16px 20px 16px 20px;
     }
     .headline {
         //spacing
@@ -88,6 +92,9 @@ button:hover {
 }
 
 @media (min-width: 768px) {
+    .nav {
+        padding: 16px 40px 16px 40px;
+    }
     .content {
         height: calc(100% - 64px);
         display: flex;

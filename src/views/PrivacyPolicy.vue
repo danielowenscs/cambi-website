@@ -1,5 +1,7 @@
 <template>
-    <NavBar/>
+<div class="nav">
+    <CambiLogoV2/>
+</div>
 <div class="content">
     <h1 class="H3"> Privacy Policy</h1>
     <pre class="B3">
@@ -45,14 +47,22 @@ If you have any questions or concerns about our Privacy Policy, please contact u
 </div>
 </template>
 <script>
+import CambiLogoV2 from '@/components/icons/CambiLogoV2.vue';
+
     export default {
         name: "PrivacyPolicy",
         components: {
-        },
+    CambiLogoV2
+},
         mounted() {
         window.scrollTo(0, 0);
-        }   
-    }
+        },
+        methods: {
+    goHome() {
+    this.$router.push("/");
+},
+           
+    }}
 </script>
 <style lang="scss" scoped>
 @import '@/assets/styles/styles.scss';
@@ -73,4 +83,17 @@ If you have any questions or concerns about our Privacy Policy, please contact u
         max-width: 100%; /* This will limit the width of the container */
         margin: 0 auto;
     }
+    
+    @media (max-width: 767px) {
+        .nav {
+        padding: 16px 20px 16px 20px;
+    }
+    }
+    @media (min-width: 768px) {
+        .nav {
+        padding: 16px 240px 16px 40px;
+    }
+    }
+
+    
 </style>

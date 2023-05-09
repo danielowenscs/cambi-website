@@ -1,6 +1,8 @@
 <template>
     <div class="container background-color">
-        <div class="nav"></div>
+        <div class="nav">
+            <CambiLogoV2/>
+        </div>
         <div class="content">
             <h1 class="headline">Thank you for your interest in Cambi</h1>
             <h2 class="headline-2">Follow us on Instagram and join our Discord!</h2>
@@ -11,50 +13,30 @@
     </div>
     </template>
       
-      <script>
-    //   const script = document.createElement('script');
-    //   script.src = 'https://www.google.com/recaptcha/api.js';
-    //   script.async = true;
-    //   script.defer = true;
-    //   document.body.appendChild(script);
-      
-      import { usersCollection } from '../firebase'
-      import { addDoc } from 'firebase/firestore'
-    import NavBar from '@/components/NavBar.vue';
-    
-      
-      export default {
-        name: "JoinCambi",
-        components: {
-            NavBar
-        },
-        data() {
-            return {
-                email: "",
-                message: "",
-            };
-        },
-        methods: {
-            async createUser() {
-                try {
-                    const data = { email: this.$data.email, joinDate: new Date().toLocaleDateString() };
-                    console.log(data);
-                    //const addedDoc = await addDoc(usersCollection, null);
-                    const addedDoc = await addDoc(usersCollection, data);
-                    console.log(addDoc, addedDoc);
-                    this.$router.push("/thankyou");
-                }
-                catch (error) {
-                    this.message = "an error occured";
-                }
-            },
-            goHome() {
-                this.$router.push("/");
-            },
-        },
-        components: { NavBar }
-    }
-      </script>
+<script>
+import CambiLogoV2 from '@/components/icons/CambiLogoV2.vue';
+
+
+
+
+export default {
+name: "ThankYou",
+components: {
+    CambiLogoV2
+},
+
+methods: {
+    goHome() {
+    this.$router.push("/");
+},
+},
+// mounted() {
+//     location.reload();
+//     console.log('hi');
+// }
+
+}
+</script>
       
       <style lang="scss" scoped>
       @import '@/assets/styles/styles.scss';
@@ -83,16 +65,16 @@
         .background-color {
                 background-color: #F8FAFF;
             }
-       
+     
     
         @media (max-width: 767px) {
+            .nav {
+        padding: 16px 20px 16px 20px;
+    }
             .container {
                 height: calc(100vh - 64px);
             }
-            .nav {
-                background-color: green;
-                height: 64px;
-            }
+            
             .content {
                 height: calc(100% - 64px);
                 display: flex;
@@ -138,10 +120,6 @@
         @media (min-width: 768px) {
             .container {
                 height: calc(100vh - 64px);
-            }
-            .nav {
-                background-color: green;
-                height: 64px;
             }
             .content {
                 height: calc(100% - 64px);

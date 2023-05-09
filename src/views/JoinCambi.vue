@@ -1,6 +1,8 @@
 <template>
 <div class="container background-color">
-    <div class="nav"></div>
+    <div class="nav">
+      <CambiLogoV2/>
+    </div>
     <div class="content">
         <h1 class="headline">Join The Cambi Community</h1>
         <h2 class="headline-2">Sign up for exclusive updates and early access</h2>
@@ -8,7 +10,7 @@
             <div class="B1 error">{{ message }}</div>
         </div>
         <form @submit.prevent="createUser">
-            <input v-model="email" type="email" placeholder="Email">
+            <input v-model="email" type="email" placeholder="Email" required>
             <button type="submit"> Join Cambi </button>
         </form>
     </div>
@@ -16,53 +18,85 @@
 </template>
   
   <script>
-//   const script = document.createElement('script');
-//   script.src = 'https://www.google.com/recaptcha/api.js';
-//   script.async = true;
-//   script.defer = true;
-//   document.body.appendChild(script);
-  
-  import { usersCollection } from '../firebase'
-  import { addDoc } from 'firebase/firestore'
-import NavBar from '@/components/NavBar.vue';
 
-  
-  export default {
-    name: "JoinCambi",
-    components: {
-        NavBar
-    },
-    data() {
-        return {
-            email: "",
-            message: "",
+
+import { usersCollection } from '../firebase'
+import { addDoc } from 'firebase/firestore'
+import NavBar from '@/components/NavBar.vue';
+import CambiLogoV2 from '@/components/icons/CambiLogoV2.vue';
+
+
+
+export default {
+  name: "JoinCambi",
+  components: {
+    NavBar,
+    CambiLogoV2
+},
+  data() {
+    return {
+      email: "",
+      message: "",
+      reCaptchaScript: null,
+    };
+  },
+  methods: {
+    async createUser() {
+      try {
+        const token = await grecaptcha.execute('6Lf1bPYlAAAAANuJSKSmlhKeUJy-eyA8M5-pVu8D');
+        const data = {
+          email: this.$data.email,
+          joinDate: new Date().toLocaleDateString(),
+          token: token,
         };
+        const addedDoc = await addDoc(usersCollection, data);
+        this.$router.push("/thankyou");
+      } catch (error) {
+        console.log(error)
+        this.message = "an error occurred";
+      }
     },
-    methods: {
-        async createUser() {
-            try {
-                const data = { email: this.$data.email, joinDate: new Date().toLocaleDateString() };
-                console.log(data);
-                //const addedDoc = await addDoc(usersCollection, null);
-                const addedDoc = await addDoc(usersCollection, data);
-                console.log(addDoc, addedDoc);
-                this.$router.push("/thankyou");
-            }
-            catch (error) {
-                this.message = "an error occured";
-            }
-        },
-        goHome() {
-            this.$router.push("/");
-        },
+    goHome() {
+      this.$router.push("/");
     },
-    components: { NavBar }
+    loadReCaptchaScript() {
+      this.reCaptchaScript = document.createElement('script');
+      this.reCaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=6Lf1bPYlAAAAANuJSKSmlhKeUJy-eyA8M5-pVu8D';
+      this.reCaptchaScript.async = true;
+      this.reCaptchaScript.defer = true;
+      this.reCaptchaScript.addEventListener('load', () => {
+        grecaptcha.ready(() => {
+          // reCAPTCHA API is ready
+          // call grecaptcha.execute() here
+        });
+      });
+      document.body.appendChild(this.reCaptchaScript);
+    },
+    removeScript() {
+      window.removeEventListener('beforeunload', this.removeScript);
+      if (this.reCaptchaScript) {
+        this.reCaptchaScript.remove();
+        this.reCaptchaScript = null;
+        console.log(this.reCaptchaScript);
+      }
+    },
+  },
+  mounted() {
+    this.loadReCaptchaScript();
+    window.addEventListener('beforeunload', this.removeScript);
+  },
+  beforeRouteLeave(to, from, next) {
+    this.removeScript();
+    next();
+  }
 }
+
+
+
   </script>
   
   <style lang="scss" scoped>
   @import '@/assets/styles/styles.scss';
-
 
     .error {
         text-align: center;
@@ -110,12 +144,11 @@ import NavBar from '@/components/NavBar.vue';
    
 
     @media (max-width: 767px) {
+      .nav {
+        padding: 16px 20px 16px 20px;
+    }
         .container {
             height: calc(100vh - 64px);
-        }
-        .nav {
-           // background-color: green;
-            height: 64px;
         }
         .content {
             height: calc(100% - 64px);
@@ -160,12 +193,11 @@ import NavBar from '@/components/NavBar.vue';
         }
     }
     @media (min-width: 768px) {
+      .nav {
+        padding: 16px 40px 16px 40px;
+    }
         .container {
             height: calc(100vh - 64px);
-        }
-        .nav {
-            background-color: green;
-            height: 64px;
         }
         .content {
             height: calc(100% - 64px);

@@ -14,18 +14,20 @@
   import Footer from '@/components/Footer.vue';
   import InfoSection from '@/components/InfoSection.vue';
   import NavBar from '@/components/NavBar.vue';
+import CambiLogo from '@/components/icons/CambiLogo.vue';
   
   export default {
     name: 'Home',
     components: {
-      HeroSection,
-      MeetCambi,
-      CardSection,
-      PhoneSection,
-      Footer,
-      InfoSection,
-      NavBar,
-    },
+    HeroSection,
+    MeetCambi,
+    CardSection,
+    PhoneSection,
+    Footer,
+    InfoSection,
+    NavBar,
+    CambiLogo
+},
   }
   </script>
   
