@@ -5,9 +5,7 @@
         </div>
         <div class="content">
             <h1 class="headline">Thank you for your interest in Cambi</h1>
-            <h2 class="headline-2">Follow us on Instagram and join our Discord!</h2>
-            <!-- <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
-            <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a> -->
+            <h2 class="headline-2">Follow us on <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y">Instagram</a> and join our <a href="https://discord.gg/pZKk7tHC">Discord</a></h2>
             <button @click="goHome"> Back To Cambi </button>
         </div>
     </div>
@@ -41,7 +39,10 @@ methods: {
       <style lang="scss" scoped>
       @import '@/assets/styles/styles.scss';
     
-    
+    a {
+        text-decoration: none;
+        color: $Se2;
+    }
   
       
         button {
@@ -166,7 +167,3 @@ methods: {
         
       
       </style>
-
-
-<a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/Instagram-p.png" alt="Instagram" class="icon"></a>
-                        <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/Discord-p.png" alt="Discord" class="icon"></a>
