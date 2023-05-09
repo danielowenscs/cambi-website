@@ -6,6 +6,7 @@ import JoinCambi from './views/JoinCambi.vue';
 import ThankYou from './views/ThankYou.vue';
 import PrivacyPolicy from './views/PrivacyPolicy.vue';
 
+
 const routes = [
     { path: '/', component: Home },
     { path: '/joinus', component: JoinCambi },
@@ -24,4 +25,5 @@ const router = createRouter({
 const app = createApp(App);
 app.use(router);
 app.mount('#app');
+
 

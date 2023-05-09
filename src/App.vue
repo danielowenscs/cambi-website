@@ -1,6 +1,6 @@
 <template>
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-  <RouterView></RouterView>
+      <RouterView></RouterView>
 </template>
 <script>
 import JoinCambi from './views/JoinCambi.vue';

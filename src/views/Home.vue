@@ -1,42 +1,35 @@
 <template>
-    <div class="container">
-        <NavBar/>
-        <HeroSection/>
-    </div>
-    <MeetCambi/>
-    <InfoSection/>
-    <PhoneSection/>
-    <Footer/>
-</template>
-
-<script>
-
-import HeroSection from '../components/HeroSection.vue'
-import MeetCambi from '@/components/MeetCambi.vue';
-import CardSection from '@/components/CardSection.vue';
-import PhoneSection from '@/components/PhoneSection.vue';
-import Footer from '@/components/Footer.vue';
-import InfoSection from '@/components/InfoSection.vue';
-import NavBar from '@/components/NavBar.vue';
-
-export default {
+      <HeroSection/>
+      <MeetCambi/>
+      <InfoSection/>
+      <PhoneSection/>
+      <Footer/>
+  </template>
+  
+  <script>
+  import HeroSection from '../components/HeroSection.vue'
+  import MeetCambi from '@/components/MeetCambi.vue';
+  import CardSection from '@/components/CardSection.vue';
+  import PhoneSection from '@/components/PhoneSection.vue';
+  import Footer from '@/components/Footer.vue';
+  import InfoSection from '@/components/InfoSection.vue';
+  import NavBar from '@/components/NavBar.vue';
+  
+  export default {
     name: 'Home',
     components: {
-    HeroSection,
-    MeetCambi,
-    CardSection,
-    PhoneSection,
-    Footer,
-    InfoSection,
-    NavBar
-}
-}
-</script>
-
-<style lang='scss' scoped>
-@import '@/assets/styles/styles.scss';
-
-.container {
-    background: linear-gradient(-45deg, #312D9F, #4858D7);
-}
-</style>
+      HeroSection,
+      MeetCambi,
+      CardSection,
+      PhoneSection,
+      Footer,
+      InfoSection,
+      NavBar,
+    },
+  }
+  </script>
+  
+  <style lang='scss' scoped>
+  @import '@/assets/styles/styles.scss';
+  </style>
+  

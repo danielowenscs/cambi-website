@@ -1,9 +1,12 @@
 <template>
-    <div class="content">
-        <h1 class="headline">Shop Mindfully</h1>
-        <h2 class="body">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</h2>
-        <button @click="goToJoinForm()" class="B1 button">Join Cambi</button>
-    </div>
+   <div class="container">
+        <div class="nav"></div>
+        <div class="content">
+            <h1 class="headline">Shop Mindfully</h1>
+            <h2 class="body">Discover products that align with your values and preferences. Empower yourself to make shopping effortless and enjoyable.</h2>
+            <button @click="goToJoinForm()" class="B1 button">Join Cambi</button>
+        </div>
+   </div>
     
 </template>
 <script>
@@ -37,10 +40,31 @@ export default {
   border: none;
   color: $N6;
 }
+button:hover {
+    background-color: $Se3;
+}
+.nav {
+    height: 64px;
+}
+.container {
+    height: calc(100vh - 64px);
+    background: linear-gradient(-45deg, #312D9F, #4858D7);
+}
+.content {
+    height: calc(100% - 64px);
+}
+
+
 @media (max-width: 767px) {
     .content {
-    padding: 128px 24px 128px 24px;
-    text-align: center;
+        height: calc(100% - 64px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+        overflow-y: auto;
+        text-align: center;
     }
     .headline {
         //spacing
@@ -65,7 +89,13 @@ export default {
 
 @media (min-width: 768px) {
     .content {
-        padding: 96px 40px;
+        height: calc(100% - 64px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+        overflow-y: auto;
         text-align: center;
     }
     .headline {

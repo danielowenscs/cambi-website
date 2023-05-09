@@ -37,6 +37,9 @@ export default {
 .background-shade {
     background-color: #F8FAFF;
 }
+div {
+    background-color: white !important;
+}
 
 @media (max-width: 767px) {
     .content {

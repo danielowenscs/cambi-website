@@ -1,31 +1,16 @@
 <template>
-<NavBar/>
-<div class="container">
-    <div class="grid">
-        <main>
-            <div class="content">
-                <h1 class="H2" >Join the Cambi Community</h1>
-                    <div class="spacing-16px"></div>
-                    <div class="spacing-16px"></div>
-                <h2 class="B1">Sign up for exclusive updates and early access!</h2>
-                    <div class="B1"></div>
-                    <div class="spacing-16px"></div>
-                    <div class="spacing-16px"></div>
-                    <div class="spacing-16px"></div>
-                    <div class="spacing-16px"></div>
-                    <div v-if="message">
-                    <div class="B1 error">{{ message }}</div>
-                    <div class="spacing-16px"></div>
-                    <div class="spacing-16px"></div>
-                    </div>
-                <form @submit.prevent="createUser">
-                    <input v-model="email" type="email" class="B3" placeholder="Email">
-                        <div class="spacing-16px"></div>
-                        <div class="spacing-16px"></div>
-                    <button type="submit"> Join Cambi </button>
-                </form>
-            </div>
-        </main>
+<div class="container background-color">
+    <div class="nav"></div>
+    <div class="content">
+        <h1 class="headline">Join The Cambi Community</h1>
+        <h2 class="headline-2">Sign up for exclusive updates and early access</h2>
+        <div v-if="message">
+            <div class="B1 error">{{ message }}</div>
+        </div>
+        <form @submit.prevent="createUser">
+            <input v-model="email" type="email" placeholder="Email">
+            <button type="submit"> Join Cambi </button>
+        </form>
     </div>
 </div>
 </template>
@@ -44,6 +29,9 @@ import NavBar from '@/components/NavBar.vue';
   
   export default {
     name: "JoinCambi",
+    components: {
+        NavBar
+    },
     data() {
         return {
             email: "",
@@ -75,81 +63,22 @@ import NavBar from '@/components/NavBar.vue';
   <style lang="scss" scoped>
   @import '@/assets/styles/styles.scss';
 
-    html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
 
-    body {
-        background-color: $N5;
-        margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
-        width: 100%;
-        height: 100vh;
-    }
-
-    main {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-    }
     .error {
         text-align: center;
         color: $D3;
-    }
-
-    img {
-        margin: 1rem;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display:inline;
-        // justify-content: space-between;
-        align-items: center;
-        transition: 0.6s;
-        padding-left: 1.5%;
-        padding-right: 1.5%;
-        padding-top: 30px;
-        position: fixed;
-        
-    }
-
-    .content {
-        margin: auto;
-        width: 980px;
-        //height: 100%;
-    }
-    .spacing-16px{
-        height: 16px;
-    }
-    h1 {
-        margin: 0px;
-        text-align: center;
-    }
-    
-    h2 {
-        margin: 0px;
-        text-align: center;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
+    } 
     input {
         background-color: $N6;
         border: 1px solid $Se6;
         padding: 16px 20px;
-        width: 338px;
+        //width: 338px;
         border-radius: 4px;
+        box-sizing: border-box;
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 16px;
     }
 
     input:focus{
@@ -161,74 +90,125 @@ import NavBar from '@/components/NavBar.vue';
         font-family: 'Inter';
         font-weight: 400;
         line-height: 24px;
-        font-size: 18px;
+        font-size: 16px;
         border-radius: 8px;
-        width: 380px;
+       // width: 380px;
         height: 56px;
-        padding: 16px;
+        padding: 0;
         background-color: $Se2;
         color: $N6;
         border: none;
+        background-color: $Se2;
     }
 
     button:hover {
         background-color: $Se3;
     }
+    .background-color {
+            background-color: #F8FAFF;
+        }
+   
 
-    @media only screen and (min-width: 280px) and (max-width: 797px) {
-        html {
-            margin: 0;
-            padding: 0;
-        }
-        // header {
-        //     display: none;
-        // }
+    @media (max-width: 767px) {
         .container {
-            width: 90%;
-            height: 100%;
-            margin:auto;
-            align-items: center;
+            height: calc(100vh - 64px);
         }
-        .grid {
-            height:100vh;
-            grid-gap: 1rem;
-            display: grid;
-            grid-template-columns: repeat(4 , 1fr);
-            padding: 0.5rem 0.5rem;
-            margin: 0; 
-        }
-        main {
-            margin: 0;
-            width: 90%;
-            justify-content: center;
-            
+        .nav {
+           // background-color: green;
+            height: 64px;
         }
         .content {
-            width: 100%;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        content form {
-            display:flex;
+            height: calc(100% - 64px);
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 90%;
-            margin: 0;
+            padding: 0 40px;
+            overflow-y: auto;
+            text-align: center;
+        }
+
+        .headline {
+        //spacing
+        margin: 0 0 16px 0;
+        // text styles
+        font-family: 'Inter';
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 20px;
+        }
+        .headline-2 {
+        //spacing
+        margin: 0 0 64px 0;
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 16px;
+        
         }
 
         input {
-            padding: 1rem 1.10rem;
-            width: 90%;
+            width: calc(100vw - 80px);
+            display: block;
+            margin: 0 0 16px 0;
         }
-
         button {
-            width: 100%;
+            width: calc(100vw - 80px);
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    @media (min-width: 768px) {
+        .container {
+            height: calc(100vh - 64px);
+        }
+        .nav {
+            background-color: green;
+            height: 64px;
+        }
+        .content {
+            height: calc(100% - 64px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            overflow-y: auto;
+            text-align: center;
         }
 
+        .headline {
+        //spacing
+        margin: 0 0 16px 0;
+        font-family: 'Inter';
+        font-weight: 700;
+        line-height: 32px;
+        font-size: 28px;
+        }
+        .headline-2 {
+        //spacing
+        margin: 0 0 64px 0;
+        // text styles
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 18px;
+        
+        }
+
+        input {
+            width: 388px;
+            display: block;
+            margin: 0 0 16px 0;
+        }
+        button {
+            width: 388px;
+            display: block;
+            margin: 0 auto;
+        }
     }
+
+    
   
   </style>

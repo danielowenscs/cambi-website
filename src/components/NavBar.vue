@@ -1,6 +1,5 @@
 <template>
-    <div class="content">
-        logo here
+    <div class="nav">
     </div>
 </template>
 
@@ -24,7 +23,12 @@ export default {
 <style lang='scss' scoped>
 @import '@/assets/styles/styles.scss';
 
-.content {
-    height: 64px;
+html, body {
+  height: 100%;
 }
+.nav {
+    height: 64px;
+    background-color: rgb(227, 152, 101);
+}
+
 </style>

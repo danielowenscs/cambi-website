@@ -34,6 +34,10 @@ button {
   background-color: $Se2;
   border: none;
   color: $N6;
+  font-size: 18px;
+}
+button:hover {
+    background-color: $Se3;
 }
 .secondary-2 {
     color: $Se2;
