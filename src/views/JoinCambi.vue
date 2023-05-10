@@ -47,12 +47,10 @@ export default {
         const data = {
           email: this.$data.email,
           joinDate: new Date().toLocaleDateString(),
-          token: token,
         };
         const addedDoc = await addDoc(usersCollection, data);
         this.$router.push("/thankyou");
       } catch (error) {
-        console.log(error)
         this.message = "an error occurred";
       }
     },
@@ -77,7 +75,6 @@ export default {
       if (this.reCaptchaScript) {
         this.reCaptchaScript.remove();
         this.reCaptchaScript = null;
-        console.log(this.reCaptchaScript);
       }
     },
   },
