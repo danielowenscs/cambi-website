@@ -37,7 +37,8 @@ button {
   font-size: 18px;
 }
 button:hover {
-    background-color: $Se3;
+    background-color: $N1;
+    color: $N6;
 }
 .secondary-2 {
     color: $Se2;

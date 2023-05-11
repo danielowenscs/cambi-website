@@ -3,7 +3,8 @@
       <MeetCambi/>
       <InfoSection/>
       <PhoneSection/>
-      <Footer/>
+      <FooterComponent/>
+
   </template>
   
   <script>
@@ -11,10 +12,10 @@
   import MeetCambi from '@/components/MeetCambi.vue';
   import CardSection from '@/components/CardSection.vue';
   import PhoneSection from '@/components/PhoneSection.vue';
-  import Footer from '@/components/Footer.vue';
   import InfoSection from '@/components/InfoSection.vue';
   import NavBar from '@/components/NavBar.vue';
 import CambiLogo from '@/components/icons/CambiLogo.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
   
   export default {
     name: 'Home',
@@ -23,10 +24,10 @@ import CambiLogo from '@/components/icons/CambiLogo.vue';
     MeetCambi,
     CardSection,
     PhoneSection,
-    Footer,
     InfoSection,
     NavBar,
-    CambiLogo
+    CambiLogo,
+    FooterComponent
 },
   }
   </script>

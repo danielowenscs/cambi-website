@@ -43,8 +43,10 @@ export default {
   color: $N6;
 }
 button:hover {
-    background-color: $Se3;
+    background-color: white;
+    color: black;
 }
+
 
 .container {
     height: calc(100vh - 64px);
