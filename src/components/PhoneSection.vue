@@ -39,7 +39,9 @@ button {
 button:hover {
     background-color: $N1;
     color: $N6;
+    cursor: pointer;
 }
+
 .secondary-2 {
     color: $Se2;
 }
@@ -93,7 +95,7 @@ button:hover {
     }
     .headline {
         //spacing
-        margin:0 0 16px 0;
+        margin:0 0 32px 0;
 
         // text styles
         font-family: 'Inter';
@@ -153,7 +155,7 @@ button:hover {
     }
     .headline {
         //spacing
-        margin:0 0 16px 0;
+        margin:0 0 32px 0;
 
         // text styles
         font-family: 'Inter';
@@ -186,7 +188,7 @@ button:hover {
     }
     
     .button-container {
-        margin: 16px 0 0 0;
+        margin: 32px 0 0 0;
         grid-row: 2 /span 3;
         grid-column: 1/9;
         height: 100%

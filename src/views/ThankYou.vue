@@ -4,7 +4,7 @@
             <CambiLogoV2/>
         </div>
         <div class="content">
-            <h1 class="headline">Thank you for your interest in Cambi</h1>
+            <h1 class="headline">Thank you for your interest in Cambi!</h1>
             <h2 class="headline-2">Follow us on <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y">Instagram</a> and join our <a href="https://discord.gg/pZKk7tHC">Discord</a></h2>
             <button @click="goHome"> Back To Cambi </button>
         </div>
@@ -62,16 +62,17 @@ methods: {
     
         button:hover {
             background-color: $Se3;
+            cursor: pointer;
         }
         .background-color {
                 background-color: #F8FAFF;
             }
-     
-    
-        @media (max-width: 767px) {
             .nav {
         padding: 16px 20px 16px 20px;
     }
+    
+        @media (max-width: 767px) {
+
             .container {
                 height: calc(100vh - 64px);
             }

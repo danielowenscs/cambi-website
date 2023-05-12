@@ -134,6 +134,7 @@ export default {
 
     button:hover {
         background-color: $Se3;
+        cursor: pointer;
     }
     .background-color {
             background-color: #F8FAFF;

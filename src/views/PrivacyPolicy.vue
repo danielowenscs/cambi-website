@@ -66,12 +66,6 @@ import CambiLogoV2 from '@/components/icons/CambiLogoV2.vue';
 </script>
 <style lang="scss" scoped>
 @import '@/assets/styles/styles.scss';
- .content {
-        margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
-        padding: 10%;
-        scroll-margin-top: 0px;
-
-    }
     body {
         background-color: $N5;
     }
@@ -87,13 +81,24 @@ import CambiLogoV2 from '@/components/icons/CambiLogoV2.vue';
     @media (max-width: 767px) {
         .nav {
         padding: 16px 20px 16px 20px;
+        .content {
+        margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
+        padding: 0 20px 0 20px;
+        scroll-margin-top: 0px;
+
+    }
     }
     }
     @media (min-width: 768px) {
         .nav {
         padding: 16px 240px 16px 40px;
     }
+     .content {
+        margin: 0 auto; /* shorthand for setting top and bottom margin to 0 and left and right margin to auto */
+        padding: 16px 240px 16px 40px;
+        scroll-margin-top: 0px;
     }
+}
 
     
 </style>

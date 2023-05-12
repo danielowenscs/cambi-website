@@ -119,6 +119,10 @@
     svg {
         height: 32px;
         width: 130px;
+        
+    }
+    svg:hover {
+      cursor: pointer;
     }
     
     </style>

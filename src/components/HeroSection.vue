@@ -45,6 +45,7 @@ export default {
 button:hover {
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 
@@ -99,6 +100,7 @@ button:hover {
     }
     .content {
         height: calc(100% - 64px);
+        //height: 500vh;
         display: flex;
         flex-direction: column;
         justify-content: center;

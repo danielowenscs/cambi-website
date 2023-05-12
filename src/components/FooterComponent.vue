@@ -1,18 +1,4 @@
 <template>
-        <!-- <div class="background">
-            <div class="container">
-                <div class="grid">
-                    <div class="content">
-                    <img src="../assets/imgs/logo-cambi.png" alt="Website Logo" class="logo">
-                    <h5 class="H4">{{ head }}</h5>
-                    <p class="B3">{{ line }}<span class="color">{{ email }}</span></p>
-                    <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/_Instagram.png" alt="Instagram" class="icon"></a>
-                    <a href="https://discord.gg/JazqGP4m" target="_blank"><img src="../assets/imgs/_Discord.png" alt="Discord" class="icon"></a>
-                    <div @click="goToPrivacy" class=" B3 privacy"> Privacy Policy</div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="container">
             <div class="icon-container">
                 <a href="https://instagram.com/cambi_app?igshid=YmMyMTA2M2Y=" target="_blank"><img src="../assets/imgs/_Instagram.png" alt="Instagram" class="icon"></a>
@@ -26,11 +12,11 @@
                 <div>
                     Resources
                 </div>
-                <div>Email</div>
+                <div> <a href="https://linktr.ee/cambi_app" target="_blank">contact us</a></div>
                 <div>
                     Policies
                 </div>
-                <div @click="goToPrivacy">Privacy Policy</div>
+                <div class="privacy-policy" @click="goToPrivacy">Privacy Policy</div>
 
             </div>
         </div>
@@ -69,22 +55,34 @@ export default {
     color: white;
 }
 a {
+    text-decoration: none;
+    color: $N6;
+    text-align: left;
+    padding: 0;
+
+}
+img {
     padding: 0 16px;
 }
-.icon-container {
-    text-align: center;
-    padding-top: 32px;
+
+.privacy-policy {
+    cursor: pointer;
 }
+
 @media (max-width: 767px) {
+    .icon-container {
+    text-align: center;
+    padding: 16px 0;
+    height: 32px;
+}
     .container {
-        padding: 32px 24px 128px 24px;
+        padding: 0px 24px 128px 24px;
     }
     .grid {
         display: grid;
         grid-template-columns: 1 fr 1 fr;
     }
     .grid > :nth-child(1){
-        margin-top: 16px;
         height: 1px;
         grid-column: span 2;
         background-color: $Se2;
@@ -115,6 +113,11 @@ a {
     }
 }
     @media (min-width: 768px) and (max-width: 1200px)  {
+        .icon-container {
+    text-align: center;
+    padding: 32px 0;
+    height: 32px;
+}
     .container {
         padding: 32px 0px 64px 0;
     }
@@ -124,7 +127,6 @@ a {
         column-gap: 24px;
     }
     .grid > :nth-child(1){
-        margin-top: 32px;
         margin-bottom: 32px;
         height: 1px;
         background-color: $Se2;
@@ -162,6 +164,11 @@ a {
         padding: 0 32px;
        //max-width: 1200px;
     }
+    .icon-container {
+    text-align: center;
+    padding: 32px 0;
+    height: 32px;
+}
     .grid {
         display: grid;
         grid-template-columns: repeat(12, 78px);
@@ -170,7 +177,6 @@ a {
         justify-content: center;
     }
     .grid > :nth-child(1){
-        margin-top: 32px;
         margin-bottom: 32px;
         height: 1px;
         background-color: $Se2;

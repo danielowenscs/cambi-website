@@ -121,7 +121,7 @@ export default {
 svg {
     height: 32px;
     width: 130px;
-    color: red;
+    cursor: pointer;
 }
 
 </style>

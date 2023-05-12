@@ -49,7 +49,7 @@ import { strings } from '@/assets/strings';
     }
     .headline {
         //spacing
-        margin:0 0 16px 0;
+        margin:0 0 32px 0;
 
         // text styles
         font-family: 'Inter';
@@ -79,7 +79,7 @@ import { strings } from '@/assets/strings';
     }
     .headline {
         //spacing
-        margin:0 0 16px 0;
+        margin:0 0 32px 0;
 
 
         // text styles

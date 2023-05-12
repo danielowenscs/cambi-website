@@ -72,7 +72,7 @@ div {
     }
     .headline {
         //spacing
-        margin:0 0 16px 0;
+        margin:0 0 32px 0;
         grid-column: 1/12;
 
         // text styles
@@ -106,7 +106,7 @@ div {
     }
     .headline {
         //spacing
-        margin:0 0 16px 0;
+        margin:0 0 32px 0;
         grid-column: 1/12;
 
         // text styles
